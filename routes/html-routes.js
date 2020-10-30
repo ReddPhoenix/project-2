@@ -7,9 +7,9 @@ module.exports = function (app) {
     app.get('/customers', function (req, res) {
         res.sendFile(path.join(__dirname, '../public/customer.html'));
     });
-    // dashboard route
-    app.get('/dashboard', function (req, res) {
-        res.sendFile(path.join(__dirname, '../public/dashboard.html'));
+    // dashboard route // main.handlebars route
+    app.get('/main', function (req, res) {
+        res.sendFile(path.join(__dirname, '../views/layouts/main.handlebars'));
     });
     // inventory route
     app.get('/inventory', function (req, res) {
@@ -19,8 +19,8 @@ module.exports = function (app) {
     app.get('/', function (req, res) {
         res.sendFile(path.join(__dirname, '../public/login.html'));
     });
-    // main.handlebars route
-    app.get('/main', function (req, res) {
-        res.sendFile(path.join(__dirname, '../views/layouts/main.handlebars'));
+    // orders route
+    app.get('/orders', function (req, res) {
+        res.sendFile(path.join(__dirname, '../public/orders.html'));
     });
 };
