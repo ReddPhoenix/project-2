@@ -27,7 +27,8 @@
     "mysql2": "^2.2.5",
     "node-sass": "^4.14.1",
     "path": "^0.12.7",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0"
   },
   "devDependencies": {
     "eslint": "^7.12.0",
