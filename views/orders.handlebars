@@ -1,0 +1,137 @@
+<section class="section">
+  <div class="columns">
+    <div class="column is-4-tablet is-3-desktop is-2-widescreen">
+      <nav class="menu">
+        <p class="menu-label">Menu</p>
+        <ul class="menu-list">
+          <li>
+            <a href="index">
+              <span class="icon">
+                <i class="fa fa-tachometer"></i>
+              </span>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="inventory">
+              <span class="icon">
+                <i class="fa fa-book"></i>
+              </span>
+              Inventory
+            </a>
+          </li>
+          <li>
+            <a href="customers">
+              <span class="icon">
+                <i class="fa fa-address-book"></i>
+              </span>
+              Customers
+            </a>
+          </li>
+          <li>
+            <a class='is-active' href="orders">
+              <span class="icon">
+                <i class="fa fa-file-text-o"></i>
+              </span>
+              Orders
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+            <div class="column">
+                <h1 class="title">Orders</h1>
+
+                <nav class="level">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <p class="subtitle is-5"><strong>3</strong> orders</p>
+                        </div>
+                        <div class="leve-item is-hidden-tablet-only">
+                            <div class="field has-addons">
+                                <p>
+                                    <input type="text" class="input" placeholder="Order#, customer...">
+                                </p>
+                                <p class="control">
+                                    <button class="button">Search</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="level-right">
+                        <p class="level-item"><strong>All</strong></p>
+                        <p class="level-item"><a>In progress</a></p>
+                        <p class="level-item"><a>Successful</a></p>
+                        <p class="level-item"><a>Failed</a></p>
+                    </div>
+                </nav>
+
+                <table class="table is-hoverable is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th>Order #</th>
+                            <th>Customer</th>
+                            <th>Date</th>
+                            <th>Products</th>
+                            <th>Status</th>
+                            <th class="has-text-right">Total</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Order #</th>
+                            <th>Customer</th>
+                            <th>Date</th>
+                            <th>Products</th>
+                            <th>Status</th>
+                            <th class="has-text-right">Total</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td><a href="edit-order.html"><strong>65423</strong></a></td>
+                            <td href="edit-customer.html">John Miller</td>
+                            <td>Oct 25, 12:34</td>
+                            <td>2</td>
+                            <td><span class="tag is-warning">In progress</span></td>
+                            <td class="has-text-right">$84.65</td>
+                        </tr>
+                        <tr>
+                            <td><a href="edit-order.html"><strong>275051</strong></a></td>
+                            <td href="edit-customer.html">Robin Dixon</td>
+                            <td>Oct 24, 15:30</td>
+                            <td>2</td>
+                            <td><span class="tag is-success">Successful</span></td>
+                            <td class="has-text-right">$39.29</td>
+                        </tr>
+                        <tr>
+                            <td><a href="edit-order.html"><strong>947564</strong></a></td>
+                            <td href="edit-customer.html">David Escalante</td>
+                            <td>Oct 23, 19:30</td>
+                            <td>2</td>
+                            <td><span class="tag is-danger">Failed</span></td>
+                            <td class="has-text-right">$520.59</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                {{!-- Disabled for future deployment --}}
+                {{!-- <nav class="pagination">
+                    <a class="pagination-previous">Previous</a>
+                    <a class="pagination-next">Next</a>
+                    <ul class="pagination-list">
+                        <li><a class="pagination-link is-current">1</a></li>
+                        <li><span class="pagination-ellipsis">&hellip;</span></li>
+                        <li><a class="pagination-link">45</a></li>
+                        <li><a class="pagination-link ">46</a></li>
+                        <li><a class="pagination-link">47 </a></li>
+                        <li><span class="pagination-ellipsis">&hellip;</span></li>
+                        <li><a class="pagination-link">86</a></li>
+                    </ul>
+                </nav> --}}
+
+            </div>
+        </div>
+    </section>

@@ -21,6 +21,6 @@ module.exports = function (app) {
     });
     // orders route
     app.get('/orders', function (req, res) {
-        res.sendFile(path.join(__dirname, '../public/orders.html'));
+        res.render('orders', { title: 'Orders' });
     });
 };
