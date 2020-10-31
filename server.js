@@ -24,9 +24,7 @@ app.get('/index', (req, res) => {
     res.render('index', { title: 'Dashboard' });
 });
 
-app.get('/inventory', (req, res) => {
-    res.render('inventory', { title: 'Inventory' });
-});
+
 
 // Routes
 // =============================================================

@@ -1,297 +1,222 @@
 <section class="section">
-    <div class="columns">
-      <div class="column is-4-tablet is-3-desktop is-2-widescreen">
-        <nav class="menu">
-          <p class="menu-label">Menu</p>
-          <ul class="menu-list">
-            <li>
-              <a href="index">
-                <span class="icon">
-                  <i class="fa fa-tachometer"></i>
-                </span>
-                Dashboard
-              </a>
-            </li>
-            <li>
-              <a class='is-active' href="books.html">
-                <span class="icon">
-                  <i class="fa fa-book"></i>
-                </span>
-                Inventory
-              </a>
-            </li>
-            <li>
-              <a href="customers.html">
-                <span class="icon">
-                  <i class="fa fa-address-book"></i>
-                </span>
-                Customers
-              </a>
-            </li>
-            <li>
-              <a href="orders.html">
-                <span class="icon">
-                  <i class="fa fa-file-text-o"></i>
-                </span>
-                Orders
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+  <div class="columns">
+    <div class="column is-4-tablet is-3-desktop is-2-widescreen">
+      <nav class="menu">
+        <p class="menu-label">Menu</p>
+        <ul class="menu-list">
+          <li>
+            <a href="index">
+              <span class="icon">
+                <i class="fa fa-tachometer"></i>
+              </span>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a class='is-active' href="inventory">
+              <span class="icon">
+                <i class="fa fa-book"></i>
+              </span>
+              Inventory
+            </a>
+          </li>
+          <li>
+            <a href="customers.html">
+              <span class="icon">
+                <i class="fa fa-address-book"></i>
+              </span>
+              Customers
+            </a>
+          </li>
+          <li>
+            <a href="orders.html">
+              <span class="icon">
+                <i class="fa fa-file-text-o"></i>
+              </span>
+              Orders
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
-      <div class="column">
-        <h1 class="title">Inventory</h1>
+    <div class="column">
+      <h1 class="title">Inventory</h1>
 
-        <nav class="level">
-          <div class="level-left">
-            <div class='level-item'>
-              <p class="subtitle is-5"><strong>6</strong> items</p>
+      <nav class="level">
+        <div class="level-left">
+          <div class='level-item'>
+            <p class="subtitle is-5"><strong>5</strong> items</p>
+          </div>
+
+          <p class="level-item">
+            <a class="button is-success" href="new-book.html">Available</a>
+          </p>
+
+          Disabled for 
+          {{!-- <div class="level-item is hidden-tablet-only">
+            <div class="field has-addons">
+              <p class="control">
+                <input class="input" type="text" placeholder="Product Name, Code...">
+              </p>
+              <p class="control">
+                <button class="button">Search</button>
+              </p>
             </div>
+          </div>
+        </div> --}}
 
-            <p class="level-item">
-              <a class="button is-success" href="new-book.html">New</a>
-            </p>
+        {{!-- Disabled for future deployment --}}
+        {{!-- <div class="level-right">
+          <div class="level-item">
+            Order by
+          </div>
+          <div class="level-item">
+            <div class="select">
+              <select>
+                <option>Publish Date</option>
+                <option>Price</option>
+                <option>Page count</option>
+              </select>
+            </div>
+          </div>
+        </div> --}}
+      </nav>
 
-            <div class="level-item is hidden-tablet-only">
-              <div class="field has-addons">
-                <p class="control">
-                  <input class="input" type="text" placeholder="Book name, ISBN...">
+      <div class="columns is-multiline">
+        <div class="column is-12-tablet is-6-desktop is-4-widescreen">
+          <article class='box'>
+            <div class="media">
+              <aside class="media-left">
+                <img src='/assets/images/directv-logo.png' alt="Direct TV Logo" width="80">
+              </aside>
+              <div class="media-content">
+                <p class="title is-5 is-spaced is-marginless">
+                  <a href="edit-book.html">DirectTv</a>
                 </p>
-                <p class="control">
-                  <button class="button">Search</button>
-                </p>
+                {{!-- <p class="subtitle is-marginless">$0.00</p> --}}
+                <div class="content is-small">
+                  Product Code: DT
+                  <br>
+                  Product ID: 1
+                  <br>
+                  {{!-- <a href="user.html">Edit</a>
+                    <span>.</span>
+                    <a>Delete</a> --}}
+                  <p></p>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div class="level-right">
-            <div class="level-item">
-              Order by
-            </div>
-            <div class="level-item">
-              <div class="select">
-                <select>
-                  <option>Publish Date</option>
-                  <option>Price</option>
-                  <option>Page count</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </nav>
-
-        <div class="columns is-multiline">
-          <div class="column is-12-tablet is-6-desktop is-4-widescreen">
-            <article class='box'>
-              <div class="media">
-                <aside class="media-left">
-                  <img src='https://via.placeholder.com/80.png?text=LogoPlaceholder80' width="80">
-                </aside>
-                <div class="media-content">
-                  <p class="title is-5 is-spaced is-marginless">
-                    <a href="edit-book.html">Test Book 1</a>
-                  </p>
-                  <p class="subtitle is-marginless">$25.99</p>
-                  <div class="content is-small">
-                    238 pages
-                    <br>
-                    ISBN: 2828929
-                    <br>
-                    <a href="user.html">Edit</a>
-                    <span>.</span>
-                    <a>Delete</a>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="column is-12-tablet is-6-desktop is-4-widescreen">
-            <article class='box'>
-              <div class="media">
-                <aside class="media-left">
-                  <img src='https://via.placeholder.com/80.png?text=LogoPlaceholder80' width="80">
-                </aside>
-                <div class="media-content">
-                  <p class="title is-5 is-spaced is-marginless">
-                    <a href="edit-book.html">Book Test 2</a>
-                  </p>
-                  <p class="subtitle is-marginless">$5.99</p>
-                  <div class="content is-small">
-                    156 pages
-                    <br>
-                    ISBN: 2828956
-                    <br>
-                    <a href="user.html">Edit</a>
-                    <span>.</span>
-                    <a>Delete</a>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="column is-12-tablet is-6-desktop is-4-widescreen">
-            <article class='box'>
-              <div class="media">
-                <aside class="media-left">
-                  <img src='https://via.placeholder.com/80.png?text=LogoPlaceholder80' width="80">
-                </aside>
-                <div class="media-content">
-                  <p class="title is-5 is-spaced is-marginless">
-                    <a href="edit-book.html">3 Book Test</a>
-                  </p>
-                  <p class="subtitle is-marginless">$65.99</p>
-                  <div class="content is-small">
-                    506 pages
-                    <br>
-                    ISBN: 2828846
-                    <br>
-                    <a href="user.html">Edit</a>
-                    <span>.</span>
-                    <a>Delete</a>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="column is-12-tablet is-6-desktop is-4-widescreen">
-            <article class="box">
-              <div class="media">
-                <aside class="media-left">
-                  <img src="https://via.placeholder.com/80.png?text=LogoPlaceholder80" width="80">
-                </aside>
-                <div class="media-content">
-                  <p class="title is-5 is-marginless">
-                    <a href="edit-book.html">Book 4 Test</a>
-                  </p>
-                  <p class="subtitle is-marginless">$54.99</p>
-                  <div class="content is-small">
-                    453 pages
-                    <br>
-                    ISBN: 2532524
-                    <br>
-                    <a href="user.html">Edit</a>
-                    <span>.</span>
-                    <a>Delete</a>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="column is-12-tablet is-6-desktop is-4-widescreen">
-            <article class="box">
-              <div class="media">
-                <aside class="media-left">
-                  <img src="https://via.placeholder.com/80.png?text=LogoPlaceholder80" width="80">
-                </aside>
-                <div class="media-content">
-                  <p class="title is-5 is-marginless">
-                    <a href="edit-book.html">Book 5.1 Test</a>
-                  </p>
-                  <p class="subtitle is-marginless">$94.99</p>
-                  <div class="content is-small">
-                    483 pages
-                    <br>
-                    ISBN: 2532584524
-                    <br>
-                    <a href="user.html">Edit</a>
-                    <span>.</span>
-                    <a>Delete</a>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="column is-12-tablet is-6-desktop is-4-widescreen">
-            <article class="box">
-              <div class="media">
-                <aside class="media-left">
-                  <img src="https://via.placeholder.com/80.png?text=LogoPlaceholder80" width="80">
-                </aside>
-                <div class="media-content">
-                  <p class="title is-5 is-marginless">
-                    <a href="edit-book.html">#6 Book Test</a>
-                  </p>
-                  <p class="subtitle is-marginless">$14.99</p>
-                  <div class="content is-small">
-                    83 pages
-                    <br>
-                    ISBN: 253685124
-                    <br>
-                    <a href="user.html">Edit</a>
-                    <span>.</span>
-                    <a>Delete</a>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="column is-12-tablet is-6-desktop is-4-widescreen">
-            <article class="box">
-              <div class="media">
-                <aside class="media-left">
-                  <img src="https://via.placeholder.com/80.png?text=LogoPlaceholder80" width="80">
-                </aside>
-                <div class="media-content">
-                  <p class="title is-5 is-marginless">
-                    <a href="edit-book.html">#7 Book Test</a>
-                  </p>
-                  <p class="subtitle is-marginless">$19.99</p>
-                  <div class="content is-small">
-                    88 pages
-                    <br>
-                    ISBN: 98564124
-                    <br>
-                    <a href="user.html">Edit</a>
-                    <span>.</span>
-                    <a>Delete</a>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="column is-12-tablet is-6-desktop is-4-widescreen">
-            <article class="box">
-              <div class="media">
-                <aside class="media-left">
-                  <img src="https://via.placeholder.com/80.png?text=LogoPlaceholder80" width="80">
-                </aside>
-                <div class="media-content">
-                  <p class="title is-5 is-marginless">
-                    <a href="edit-book.html">Book Test #8</a>
-                  </p>
-                  <p class="subtitle is-marginless">$49.99</p>
-                  <div class="content is-small">
-                    878 pages
-                    <br>
-                    ISBN: 9453157
-                    <br>
-                    <a href="user.html">Edit</a>
-                    <span>.</span>
-                    <a>Delete</a>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
+          </article>
         </div>
 
-        <nav class="pagination">
+        <div class="column is-12-tablet is-6-desktop is-4-widescreen">
+          <article class='box'>
+            <div class="media">
+              <aside class="media-left">
+                <img src='/assets/images/KFB-Logo.png' alt="Amazon Key for Business" width="80">
+              </aside>
+              <div class="media-content">
+                <p class="title is-5 is-spaced is-marginless">
+                  <a href="edit-book.html">KfB (Amazon)</a>
+                </p>
+                {{!-- <p class="subtitle is-marginless">$0.00</p> --}}
+                <div class="content is-small">
+                  Product Code: KB
+                  <br>
+                  Product ID: 2
+                  <br>
+                  {{!-- <a href="user.html">Edit</a>
+                    <span>.</span>
+                    <a>Delete</a> --}}
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="column is-12-tablet is-6-desktop is-4-widescreen">
+          <article class='box'>
+            <div class="media">
+              <aside class="media-left">
+                <img src='/assets/images/orby-logo.png' alt="Orby TV Logo" width="80">
+              </aside>
+              <div class="media-content">
+                <p class="title is-5 is-spaced is-marginless">
+                  <a href="edit-book.html">Orby TV</a>
+                </p>
+                {{!-- <p class="subtitle is-marginless">$0.00</p> --}}
+                <div class="content is-small">
+                  Product Code: OT
+                  <br>
+                  Product ID: 3
+                  <br>
+                  {{!-- <a href="user.html">Edit</a>
+                    <span>.</span>
+                    <a>Delete</a> --}}
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="column is-12-tablet is-6-desktop is-4-widescreen">
+          <article class="box">
+            <div class="media">
+              <aside class="media-left">
+                <img src="/assets/images/viasat-logo.png" alt="Viasat Logo" width="80">
+              </aside>
+              <div class="media-content">
+                <p class="title is-5 is-marginless">
+                  <a href="edit-book.html">Viasat</a>
+                </p>
+                {{!-- <p class="subtitle is-marginless">$0.00</p> --}}
+                <div class="content is-small">
+                  Product Code: VS
+                  <br>
+                  Prodcut ID: 4
+                  <br>
+                  {{!-- <a href="user.html">Edit</a>
+                    <span>.</span>
+                    <a>Delete</a> --}}
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="column is-12-tablet is-6-desktop is-4-widescreen">
+          <article class="box">
+            <div class="media">
+              <aside class="media-left">
+                <img src="/assets/images/directv-viasat-logo.png" alt="DirecTv & Viasat Combined Logo" width="80">
+              </aside>
+              <div class="media-content">
+                <p class="title is-5 is-marginless">
+                  <a href="edit-book.html">DTV VS (DirectTv & Viasat)</a>
+                </p>
+                {{!-- <p class="subtitle is-marginless">$0.00</p> --}}
+                <div class="content is-small">
+                  Product Code: DV
+                  <br>
+                  Product ID: 5
+                  <br>
+                  {{!-- <a href="user.html">Edit</a>
+                    <span>.</span>
+                    <a>Delete</a> --}}
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+
+
+        {{!-- <nav class="pagination">
           <a class="pagination-previous">Previous</a>
           <a class="pagination-next">Next</a>
           <ul class="pagination-list">
@@ -303,7 +228,7 @@
             <li><span class="pagination-ellipsis">&hellip;</span></li>
             <li><a class="pagination-link">86</a></li>
           </ul>
-        </nav>
+        </nav> --}}
       </div>
     </div>
-  </section>
+</section>
