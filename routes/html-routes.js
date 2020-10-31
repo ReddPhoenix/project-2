@@ -1,21 +1,29 @@
 // Dependencies
 var path = require('path');
+// const { is } = require('sequelize/types/lib/operators');
 
 var isAuthenticated = require('../config/middleware/isAuthenticated');
 
 // Routes
 module.exports = function (app) {
     // customers route
-    app.get('/customers', (req, res) => {
-        res.render('customers', { title: 'Customers' });
+    app.get('/customers', isAuthenticated, (req, res) => {
+        res.render('customers', {
+            title: 'Customers'
+        });
     });
     // dashboard route // main.handlebars route
-    app.get('/main', function (req, res) {
-        res.render(path.join(__dirname, '../views/layouts/main.handlebars'));
+    // Route to index.handlebars
+    app.get('/index', isAuthenticated, (req, res) => {
+        res.render('index', {
+            title: 'Dashboard'
+        });
     });
     // inventory route
     app.get('/inventory', isAuthenticated, (req, res) => {
-        res.render('inventory', { title: 'Inventory' });
+        res.render('inventory', {
+            title: 'Inventory'
+        });
         // res.send('inventory page');
     });
     // login route
@@ -24,6 +32,8 @@ module.exports = function (app) {
     });
     // orders route
     app.get('/orders', isAuthenticated, function (req, res) {
-        res.render('orders', { title: 'Orders' });
+        res.render('orders', {
+            title: 'Orders'
+        });
     });
 };

@@ -32,7 +32,7 @@ $(document).ready(function () {
         })
             .then(function () {
                 console.log('nothing is happening');
-                window.location.replace('/inventory');
+                window.location.replace('/index');
                 // If there's an error, log the error
             })
             .catch(function (err) {
