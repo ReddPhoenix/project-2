@@ -6,8 +6,8 @@ var isAuthenticated = require('../config/middleware/isAuthenticated');
 // Routes
 module.exports = function (app) {
     // customers route
-    app.get('/customers', isAuthenticated, function (req, res) {
-        res.render(path.join(__dirname, isAuthenticated, '../public/customer.html'));
+    app.get('/customers', (req, res) => {
+        res.render('customers', { title: 'Customers' });
     });
     // dashboard route // main.handlebars route
     app.get('/main', function (req, res) {
