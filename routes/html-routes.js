@@ -4,8 +4,8 @@ var path = require('path');
 // Routes
 module.exports = function (app) {
     // customers route
-    app.get('/customers', function (req, res) {
-        res.sendFile(path.join(__dirname, '../public/customer.html'));
+    app.get('/customers', (req, res) => {
+        res.render('customers', { title: 'Customers' });
     });
     // dashboard route // main.handlebars route
     app.get('/main', function (req, res) {
