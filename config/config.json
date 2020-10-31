@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "process.env.password",
-    "database": "taskably",
-    "host": "127.0.0.1",
+    "username": "qt9r97qdu8o64ygf",
+    "password": "ke856fi59wjzakzq",
+    "database": "f2l7ez6nfzoawzym",
+    "host": "vrk7xcrab1wsx4r1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
