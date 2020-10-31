@@ -12,9 +12,9 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, '../views/layouts/main.handlebars'));
     });
     // inventory route
-    app.get('/inventory', function (req, res) {
-        res.sendFile(path.join(__dirname, '../public/inventory.html'));
-    });
+    // app.get('/inventory', function (req, res) {
+    //     res.sendFile(path.join(__dirname, '../views/layouts/inventory.handlebars'));
+    // });
     // login route
     app.get('/', function (req, res) {
         res.sendFile(path.join(__dirname, '../public/login.html'));

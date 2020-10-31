@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
+    <title>  {{title}} </title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css'>
 
@@ -15,9 +15,9 @@
 
         <div class='navbar-brand'>
             <!-- Logo, tagline and navbar-burger -->
-            <a class='navbar-item'>
+            <a class='navbar-item' width="250">
                 <!-- placeholder image -->
-                <img src='https://via.placeholder.com/167x56.png?text=LogoPlaceholder167x56'>
+                <img src='/assets/images/taskably.png' alt="taskably company logo">
             </a>
             <div class='navbar-burger burger'>
                 <span></span>
@@ -31,7 +31,7 @@
             <div class='navbar-start'>
                 <div class='navbar-item'>
                     <!-- motto -->
-                    <small>Company motto</small>
+                    <h3>Your Way Of Doing Things</h3>
 
                 </div>
             </div>
@@ -57,7 +57,7 @@
                             <span class="icon is small">
                                 <i class=' fa fa-book'></i>
                             </span>
-                            Books
+                            Inventory
                         </div>
                     </a>
                     <a class="navbar-item">
@@ -73,47 +73,7 @@
         </div>
     </nav>
 
-    <section class="section">
-        <div class="columns">
-            <div class="column is-4-tablet is-3-desktop is-2-widescreen">
-                <nav class="menu">
-                    <p class="menu-label">Menu</p>
-                    <ul class="menu-list">
-                        <li>
-                            <a class='is-active' href="dashboard.html">
-                                <span class="icon">
-                                    <i class="fa fa-tachometer"></i>
-                                </span>
-                                Dashboard
-                            </a>
-                        </li>
-                        <li>
-                            <a href="inventory.html">
-                                <span class="icon">
-                                    <i class="fa fa-book"></i>
-                                </span>
-                                Books
-                            </a>
-                        </li>
-                        <li>
-                            <a href="customers.html">
-                                <span class="icon">
-                                    <i class="fa fa-address-book"></i>
-                                </span>
-                                Customers
-                            </a>
-                        </li>
-                        <li>
-                            <a href="orders.html">
-                                <span class="icon">
-                                    <i class="fa fa-file-text-o"></i>
-                                </span>
-                                Orders
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+
 
         {{{ body }}}
 

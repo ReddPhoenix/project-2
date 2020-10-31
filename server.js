@@ -20,8 +20,12 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 // Route to index.handlebars
-app.get('/main', (req, res) => {
-    res.render('index');
+app.get('/index', (req, res) => {
+    res.render('index', { title: 'Dashboard' });
+});
+
+app.get('/inventory', (req, res) => {
+    res.render('inventory', { title: 'Inventory' });
 });
 
 // Routes
