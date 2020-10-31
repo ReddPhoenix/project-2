@@ -24,6 +24,6 @@ module.exports = function (app) {
     });
     // orders route
     app.get('/orders', isAuthenticated, function (req, res) {
-        res.sendFile(path.join(__dirname, isAuthenticated, '../public/orders.html'));
+        res.render('orders', { title: 'Orders' });
     });
 };
