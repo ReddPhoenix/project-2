@@ -1,6 +1,6 @@
 module.exports = function(req, res, next) {
     // logged in
-    if (res.user) {
+    if (req.user) {
         return next();
     }
     // not logged in

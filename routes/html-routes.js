@@ -15,7 +15,8 @@ module.exports = function (app) {
     });
     // inventory route
     app.get('/inventory', isAuthenticated, (req, res) => {
-        res.render('inventory', isAuthenticated, { title: 'Inventory' });
+        res.render('inventory', { title: 'Inventory' });
+        // res.send('inventory page');
     });
     // login route
     app.get('/', function (req, res) {
@@ -23,6 +24,6 @@ module.exports = function (app) {
     });
     // orders route
     app.get('/orders', isAuthenticated, function (req, res) {
-        res.sendFile(path.join(__dirname, '../public/orders.html'));
+        res.sendFile(path.join(__dirname, isAuthenticated, '../public/orders.html'));
     });
 };
