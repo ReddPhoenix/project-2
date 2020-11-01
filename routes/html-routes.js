@@ -1,5 +1,6 @@
 // Dependencies
 var path = require('path');
+const controller = require('../controllers/controller.js')
 // const { is } = require('sequelize/types/lib/operators');
 
 var isAuthenticated = require('../config/middleware/isAuthenticated');
@@ -7,11 +8,16 @@ var isAuthenticated = require('../config/middleware/isAuthenticated');
 // Routes
 module.exports = function (app) {
     // customers route
-    app.get('/customers', isAuthenticated, (req, res) => {
-        res.render('customers', {
-            title: 'Customers'
+    app.get('/customers',
+        // isAuthenticated    ,
+        async (req, res) => {
+            let customers = await controller.getAllCustomers()
+            console.dir(customers)
+            res.render('customers', {
+                customers: customers,
+                title: 'Customers'
+            });
         });
-    });
     // dashboard route // main.handlebars route
     // Route to index.handlebars
     app.get('/index', isAuthenticated, (req, res) => {

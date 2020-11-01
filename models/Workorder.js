@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    const Workorder = sequelize.define('workorder', {
+    const Workorder = sequelize.define('Workorder', {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
