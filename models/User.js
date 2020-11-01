@@ -26,20 +26,15 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING
         },
         createdAt: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            notEmpty: true,
-            isDate: true,
-            defaultValue: DataTypes.NOW
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
         },
         updatedAt: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            notEmpty: true,
-            isDate: true,
-            defaultValue: DataTypes.NOW
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
         }
-
     });
     // Creating a custom method for our User model.
     User.prototype.validPassword = function (password) {
