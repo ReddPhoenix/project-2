@@ -4,22 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>  {{title}} </title>
+    <title> {{title}} </title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css'>
 
 </head>
 
 <body>
+    {{!-- Navigation Bar --}}
     <nav class='navbar has-shadow'>
 
         <div class='navbar-brand'>
             <!-- Logo, tagline and navbar-burger -->
             <a class='navbar-item' width="250" href="index">
-                <!-- placeholder image -->
-                <img src='/assets/images/taskably.png' alt="taskably company logo" >
+                <img src='/assets/images/taskably.png' alt="taskably company logo">
             </a>
-            <div class='navbar-burger burger has-dropdown '>
+            <div class='navbar-burger burger' onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -30,44 +30,45 @@
             <!-- User name, dropdown menu -->
             <div class='navbar-start'>
                 <div class='navbar-item'>
-                    <!-- motto -->
-                    <h3>Your Way Of Doing Things</h3>
-
+                    <div>
+                        <!-- motto -->
+                        <h3>Your Way Of Doing Things</h3>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class='navbar-end'>
-            <div class='navbar-item has-dropdown is-hoverable'>
-                <div class='navbar-link'>
-                    <!-- User name -->
-                    Alex Johnson
-                </div>
-                <div class='navbar-dropdown is-right'>
-                    <a class="navbar-item">
-                        <div>
-                            <span class='icon is-small'>
-                                <i class="fa fa-user-circle-o"></i>
-                            </span>
-                            Profile
-                        </div>
-                    </a>
-                    <a class="navbar-item" href="inventory">
-                        <div>
-                            <span class="icon is small">
-                                <i class=' fa fa-book'></i>
-                            </span>
-                            Inventory
-                        </div>
-                    </a>
-                    <a class="navbar-item" href="logout">
-                        <div>
-                            <span class="icon is-small">
-                                <i class="fa fa-sign-out"></i>
-                            </span>
-                            Sign Out
-                        </div>
-                    </a>
+            <div class='navbar-end'>
+                <div class='navbar-item has-dropdown is-hoverable'>
+                    <div class='navbar-link'>
+                        <!-- User name -->
+                        Alex Johnson
+                    </div>
+                    <div class='navbar-dropdown is-right'>
+                        <a class="navbar-item">
+                            <div>
+                                <span class='icon is-small'>
+                                    <i class="fa fa-user-circle-o"></i>
+                                </span>
+                                Profile
+                            </div>
+                        </a>
+                        <a class="navbar-item" href="inventory">
+                            <div>
+                                <span class="icon is small">
+                                    <i class=' fa fa-book'></i>
+                                </span>
+                                Inventory
+                            </div>
+                        </a>
+                        <a class="navbar-item" href="logout">
+                            <div>
+                                <span class="icon is-small">
+                                    <i class="fa fa-sign-out"></i>
+                                </span>
+                                Sign Out
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,9 +76,9 @@
 
 
 
-        {{{ body }}}
+    {{{ body }}}
 
-        </div>
+    </div>
 
     </section>
 
