@@ -1,11 +1,19 @@
 // const db = require('../models');
 const passport = require('../config/passport-config');
+const controller = require('../controllers/controller.js')
 
 module.exports = function (app) {
     app.post('/api/login', passport.authenticate('local'), function (req, res) {
         res.json(req.user);
     });
 
+
+    app.get('/api/test/', async function (req, res) {
+        let customers = await controller.getAllCustomers()
+        // res.send('test working')
+        res.json(customers)
+
+    })
 
     // Route for logging user out
     app.get('/logout', function (req, res) {
