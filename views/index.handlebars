@@ -43,8 +43,24 @@
             <div class="level">
                 <div class="level-left">
                     <h1 class="subtitle is-3">
+                        <!-- Insert JS Time/Date -->
+                        <strong><span id="spanDate"></span></strong>
+                        <script type="text/javascript">
+
+                            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+                                'August', 'September', 'October', 'November', 'December'];
+
+                            var tomorrow = new Date();
+
+                            tomorrow.setTime(tomorrow.getTime());
+
+                            document.getElementById("spanDate").innerHTML = months[tomorrow.getMonth()] + " " + tomorrow.getDate() + ", " + tomorrow.getFullYear();
+                        </script>
+
+
+
                         <!-- Placeholder name -->
-                        <span class="has-text-grey-light">Hello </span> <strong>Alex Johnson</strong></h1>
+                        {{!-- <span class="has-text-grey-light">Hello </span> <strong>Alex Johnson</strong></h1> --}}
                 </div>
 
                 <div class="level-right">
@@ -65,53 +81,72 @@
                 <div class="column is-12-tablet is-6-desktop is-3-widescreen">
                     <div class="notification is-link has-text">
                         <p class="title is-1">230</p>
-                        <p class="subtitle is-4">Orders</p>
+                        <p class="subtitle is-4">Total Orders</p>
                     </div>
                 </div>
 
                 <div class="column is-12-tablet is-6-desktop is-3-widescreen">
                     <div class="notification is-info has-text">
-                        <p class="title is-1">$92,029</p>
-                        <p class="subtitle is-4">Revenue</p>
+                        <p class="title is-1">29</p>
+                        <p class="subtitle is-4">Open</p>
                     </div>
                 </div>
 
                 <div class="column is-12-tablet is-6-desktop is-3-widescreen">
                     <div class="notification is-primary has-text">
                         <p class="title is-1">1,590</p>
-                        <p class="subtitle is-4">Visitors</p>
+                        <p class="subtitle is-4">In Progress</p>
                     </div>
                 </div>
 
                 <div class="column is-12-tablet is-6-desktop is-3-widescreen">
                     <div class="notification is-success has-text">
                         <p class="title is-1">30,632</p>
-                        <p class="subtitle is-4">Pageviews</p>
+                        <p class="subtitle is-4">Closed </p>
                     </div>
                 </div>
 
                 <div class="column is-12-tablet is-6-desktop is-4-fullhd">
                     <div class="card">
                         <div class="card-content">
-                            <h2 class="title is-4">Latest orders</h2>
+                            <h2 class="title is-4">Orders</h2>
 
                             <div class="level">
                                 <div class="level-left">
                                     <div>
                                         <p class="title is-5 is-marginless">
-                                            <a href="edit-order.html">212003</a>
+                                            New Installs
                                         </p>
                                         <small>
-                                            <!-- Insert JS Time/Date -->
-                                            Oct 25, 12:34 by <a href="edit-customer.html">John Miller</a>
+
                                         </small>
                                     </div>
                                 </div>
 
                                 <div class="level-right">
                                     <div class="has-text-right">
-                                        <p class="title is-5 is-marginless">$84.65</p>
-                                        <span class="tag is-warning">In progress</span>
+                                        <p class="tag is-success is-5 is-marginless is-large has-text-weight-bold">1435
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="level">
+                                <div class="level-left">
+                                    <div>
+                                        <p class="title is-5 is-marginless">
+                                            Service Calls
+                                        </p>
+                                        <small>
+
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="level-right">
+                                    <div class="has-text-right">
+                                        <p class="tag is-warning is-5 is-marginless is-large has-text-weight-bold">520</p>
                                     </div>
                                 </div>
                             </div>
@@ -119,37 +154,17 @@
                             <div class="level">
                                 <div class="level-left">
                                     <div>
-                                        <p class="title is-5 is-marginless">
-                                            <a href="edit.order">275051</a>
+                                        <p class="title is-5 is-marginless ">
+                                            Trouble Calls
                                         </p>
                                         <small>
-                                            Oct 24, 15:30 by <a href="edit-customer.html">Robin Dixon</a>
-                                        </small>
-                                    </div>
-                                </div>
-                                <div class="level-right">
-                                    <div class="has-text-right">
-                                        <p class="title is-5 is-marginless">$39.29</p>
-                                        <span class="tag is-success">Successful</span>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="level">
-                                <div class="level-left">
-                                    <div>
-                                        <p class="title is-5 is-marginless">
-                                            <a href="edit-order">947564</a>
-                                        </p>
-                                        <small>
-                                            Oct 23, 19:30 by <a href="edit-customer.html">David Escalante</a>
                                         </small>
                                     </div>
                                 </div>
                                 <div class="level-right">
                                     <div class="has-text-right">
-                                        <p class="title is-5 is-marginless">$520.59</p>
-                                        <span class="tag is-danger">Failed</span>
+                                        <p class="tag is-danger is-5 is-marginless is-large has-text-weight-bold">39</p>
                                     </div>
                                 </div>
                             </div>
@@ -163,18 +178,18 @@
                 <div class="column is-12-tablet is-6-desktop is-4-fullhd">
                     <div class="card">
                         <div class="card-content">
-                            <h2 class=" title is-4">Most popular books</h2>
+                            <h2 class=" title is-4">Inventory</h2>
 
                             <div class="media">
                                 <div media-left is-marginless>
                                     <p class="number">1</p>
                                 </div>
                                 <div class="media-left">
-                                    <img src="https://via.placeholder.com/40x40.png?text=40x40" alt="">
+                                    <img src='/assets/images/directv-logo.png' alt="Direct TV Logo" width="80">
                                 </div>
                                 <div class="media-content">
                                     <p class="title is-5 is-spaced is-marginless">
-                                        <a href="edit-book.html">Testing the 1st Popular Book</a>
+                                        <a href="edit-book.html">DirecTv</a>
                                     </p>
                                 </div>
                                 <div class="media-right">
@@ -187,11 +202,11 @@
                                     <p class="number">2</p>
                                 </div>
                                 <div class="media-left">
-                                    <img src="https://via.placeholder.com/40x40.png?text=40x40" alt="">
+                                    <img src='/assets/images/KFB-Logo.png' alt="Amazon Key for Business" width="80">
                                 </div>
                                 <div class="media-content">
                                     <p class="title is-5 is-spaced is-marginless">
-                                        <a href="edit-book.html">Testing 2nd Pop.Book</a>
+                                        <a href="edit-book.html">KfB</a>
                                     </p>
                                 </div>
                                 <div class="media-right">
@@ -204,17 +219,18 @@
                                     <p class="number">3</p>
                                 </div>
                                 <div class="media-left">
-                                    <img src="https://via.placeholder.com/40x40.png?text=40x40" alt="">
+                                    <img src='/assets/images/orby-logo.png' alt="Orby TV Logo" width="80">
                                 </div>
                                 <div class="media-content">
                                     <p class="title is-5 is-spaced is-marginless">
-                                        <a href="edit-book.html">Test 3rd Book</a>
+                                        <a href="edit-book.html">Orby TV</a>
                                     </p>
                                 </div>
                                 <div class="media-right">
                                     4 sold
                                 </div>
                             </div>
+
 
                             <a class="button is-link is-outlined" href="inventory">View all inventory</a>
                         </div>
@@ -224,7 +240,7 @@
                 <div class="column is-12-tablet is-6-desktop is-4-fullhd">
                     <div class="card">
                         <div class="card-content">
-                            <h2 class="title is-4">Most loyal customers</h2>
+                            <h2 class="title is-4">Technicians</h2>
 
                             <div class="media">
                                 <div class="media-left is-marginless">
@@ -279,4 +295,4 @@
             </div>
         </div>
 
-        </section>
+</section>
