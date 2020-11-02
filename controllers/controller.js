@@ -11,11 +11,17 @@ module.exports = {
             .map(tech => tech.dataValues)
     },
     getAllWorkorders: async () => {
-        return (await db.Workorder.findAll({
+        let orders = (await db.Workorder.findAll({
             include: [db.Tech, db.Customer]
 
         }))
-            .map(workorders => workorders.dataValues)
+            .map(workorders => {
+                workorders.dataValues.Tech = workorders.dataValues.Tech.dataValues
+                workorders.dataValues.Customer = workorders.dataValues.Customer.dataValues
+                return workorders.dataValues
+
+            })
+        return orders
     }
 };
 
