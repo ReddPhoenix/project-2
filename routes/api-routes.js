@@ -16,6 +16,13 @@ module.exports = function (app) {
         res.json(customers)
 
     })
+    
+    app.get('/api/test/', async function (req, res) {
+        let techs = await controller.getAllTeches()
+        // res.send('test working')
+        res.json(techs)
+
+    })
 
     // Route for logging user out
     app.get('/logout', function (req, res) {
