@@ -1,4 +1,4 @@
-insert into Customers (id, first_name, last_name, email,address,city,state,zip,phone)
+insert into Customer (id, first_name, last_name, email,address,city,state,zip,phone)
 values(1,'Prinz','Gomme','pgomme0@tamu.edu','617 Moulton Center','Billings','MT',59112,'406-392-0745')
 ,(2,'Baxy','Farrall','bfarrall1@booking.com','4 Warrior Terrace','Monticello','MN',55585,'763-468-2436')
 ,(3,'Ursula','Jest','ujest2@g.co','0562 Pleasure Trail','Pittsburgh','PA',15230,'412-163-2289')
@@ -15,7 +15,7 @@ values(1,'Prinz','Gomme','pgomme0@tamu.edu','617 Moulton Center','Billings','MT'
 ,(14,'Odella','Nannizzi','onannizzid@mysql.com','90218 Michigan Pass','Redwood City','CA',94064,'650-571-0713')
 ;
 
-insert into Teches (first_name,last_name,email,phone)
+insert into Tech (first_name,last_name,email,phone)
 values
 ('Archy',	'Pearn',	'apearn0@kickstarter.com',	'221-590-5937')
 ,('Nickolai',	'Lindsey',	'nlindsey1@networkadvertising.org',	'184-555-3156')

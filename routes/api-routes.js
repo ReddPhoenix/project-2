@@ -11,9 +11,8 @@ module.exports = function (app) {
 
 
     app.get('/api/test/', async function (req, res) {
-        let customers = await controller.getAllCustomers()
-        // res.send('test working')
-        res.json(customers)
+        let workorders = await controller.getAllWorkorders()
+        res.json(workorders)
 
     })
     

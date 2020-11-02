@@ -9,8 +9,14 @@ module.exports = {
     getAllTechs: async () => {
         return (await db.Tech.findAll({}))
             .map(tech => tech.dataValues)
-    }
+    },
+    getAllWorkorders: async () => {
+        return (await db.Workorder.findAll({
+            include: [db.Tech, db.Customer]
 
+        }))
+            .map(workorders => workorders.dataValues)
+    }
 };
 
 
