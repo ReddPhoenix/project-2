@@ -18,6 +18,7 @@ module.exports = function (app) {
             });
         });
 
+    // technicians route
     app.get('/techs',
         isAuthenticated,
         async (req, res) => {
@@ -41,6 +42,13 @@ module.exports = function (app) {
     app.get('/inventory', isAuthenticated, (req, res) => {
         res.render('inventory', {
             title: 'Inventory'
+        });
+        // res.send('inventory page');
+    });
+    // new customer route
+    app.get('/new-customer', isAuthenticated, (req, res) => {
+        res.render('new-customer', {
+            title: 'New Customer'
         });
         // res.send('inventory page');
     });

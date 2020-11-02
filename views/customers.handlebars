@@ -54,15 +54,13 @@
 
             <nav class="level">
                 <div class="level-left">
-                    <div class="level-item">
-                        <p class="subtitle is-5"><strong>3</strong> customers</p>
-                    </div>
 
                     <p class="level-item">
-                        <a class="button is-success" href="new-customer.html">New</a>
+                        <a class="button is-success" href="new-customer">Create New Customer</a>
                     </p>
 
-                    <div class="level-item is-hidden-tablet-only">
+                    {{!-- Disabled for future deployment --}}
+                    {{!-- <div class="level-item is-hidden-tablet-only">
                         <div class="field has-addons">
                             <p class="control">
                                 <input type="text" class="input" placeholder="Name, email...">
@@ -71,75 +69,76 @@
                                 <button class="button">Search</button>
                             </p>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
 
-                <div class="level-right">
+                {{!-- Disabled for future deployment --}}
+                {{!-- <div class="level-right">
                     <p class="level-item"><strong>All</strong></p>
                     <p class="level-item"><a>With orders</a></p>
                     <p class="level-item"><a>Without orders</a></p>
-                </div>
+                </div> --}}
             </nav>
 
-            <table class="table is-hoverable is-fullwidth">
-                <thead>
-                    <tr>
-                        <th class="is-narrow">
-                            <input type="checkbox">
-                        </th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Address</th>
-                        {{!-- <th>Orders</th> --}}
-                        <th>Phone Number</th>
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <th class="is-narrow">
-                            <input type="checkbox">
-                        </th>
-                        <th>Name</th>
-                        <th>Address</th>
-                        <th>Country</th>
-                        {{!-- <th>Orders</th> --}}
-                        <th>Phone Number</th>
-                    </tr>
-                </tfoot>
-                <tbody>
-                    {{#each customers}}
-                    <tr>
-                        <td>
-                            <input type="checkbox">
-                        </td>
-                        <td>
-                            <a href="edit-customer.html"><strong>
+                <table class="table is-hoverable is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th class="is-narrow">
+                                <input type="checkbox">
+                            </th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            {{!-- <th>Orders</th> --}}
+                            <th>Phone Number</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th class="is-narrow">
+                                <input type="checkbox">
+                            </th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Country</th>
+                            {{!-- <th>Orders</th> --}}
+                            <th>Phone Number</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        {{#each customers}}
+                        <tr>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>
+                                <a href="edit-customer.html"><strong>
 
-                                    <p>{{first_name}} {{last_name}}</p>
+                                        <p>{{first_name}} {{last_name}}</p>
 
 
-                                </strong></a>
-                        </td>
-                        <td><code>{{email}}</code></td>
-                        <td>{{address}}</td>
-                        {{!-- <td>
+                                    </strong></a>
+                            </td>
+                            <td><code>{{email}}</code></td>
+                            <td>{{address}}</td>
+                            {{!-- <td>
                             <a href="customer-orders.html">10</a>
                         </td> --}}
-                        <td>
-                            <div class="buttons">
-                                {{phone}}
-                                {{!-- <a href="edit-customer.html" class="button is-small">Edit</a>
+                            <td>
+                                <div class="buttons">
+                                    {{phone}}
+                                    {{!-- <a href="edit-customer.html" class="button is-small">Edit</a>
                                 <a class="button is-small">Delete</a> --}}
-                            </div>
-                        </td>
-                    </tr>
-                    {{/each}}
+                                </div>
+                            </td>
+                        </tr>
+                        {{/each}}
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
 
-            {{!-- Disabled for future deployment --}}
-            {{!-- <nav class="pagination">
+                {{!-- Disabled for future deployment --}}
+                {{!-- <nav class="pagination">
                     <a class="pagination-previous">Previous</a>
                     <a class="pagination-next">Next</a>
                     <ul class="pagination-list">
