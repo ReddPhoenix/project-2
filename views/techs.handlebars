@@ -89,7 +89,7 @@
                         </th>
                         <th>Name</th>
                         <th>Email</th>
-                        <th>Address</th>
+                        {{!-- <th>Address</th> --}}
                         {{!-- <th>Orders</th> --}}
                         <th>Phone Number</th>
                     </tr>
@@ -100,14 +100,14 @@
                             <input type="checkbox">
                         </th>
                         <th>Name</th>
-                        <th>Address</th>
-                        <th>Country</th>
+                        <th>Email</th>
+                        {{!-- <th>Address</th> --}}
                         {{!-- <th>Orders</th> --}}
                         <th>Phone Number</th>
                     </tr>
                 </tfoot>
                 <tbody>
-                    {{#each customers}}
+                    {{#each techs}}
                     <tr>
                         <td>
                             <input type="checkbox">
@@ -121,7 +121,7 @@
                                 </strong></a>
                         </td>
                         <td><code>{{email}}</code></td>
-                        <td>{{address}}</td>
+  
                         {{!-- <td>
                             <a href="customer-orders.html">10</a>
                         </td> --}}
