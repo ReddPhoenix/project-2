@@ -9,7 +9,7 @@ var isAuthenticated = require('../config/middleware/isAuthenticated');
 module.exports = function (app) {
     // customers route
     app.get('/customers',
-        isAuthenticated,
+        // isAuthenticated,
         async (req, res) => {
             let customers = await controller.getAllCustomers()
             res.render('customers', {
@@ -17,6 +17,17 @@ module.exports = function (app) {
                 title: 'Customers'
             });
         });
+
+    app.get('/techs',
+        // isAuthenticated,
+        async (req, res) => {
+            let techs = await controller.getAllTechs()
+            console.dir(techs)
+            res.send('techs', {
+                techs: techs,
+            });
+        });
+
     // dashboard route // main.handlebars route
     // Route to index.handlebars
     app.get('/index',

@@ -5,6 +5,10 @@ module.exports = {
         return (await db.Customer.findAll({}))
             .map(customer => customer.dataValues)
 
+    },
+    getAllTechs: async () => {
+        return (await db.Tech.findAll({}))
+            .map(tech => tech.dataValues)
     }
 
 };
@@ -15,4 +19,4 @@ module.exports = {
 //         console.log('result: ', res);
 //     });
 
-console.log('controller is working: ', db.Customer);
+console.log('controller is working: ', db.Tech);
