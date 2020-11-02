@@ -23,7 +23,7 @@ module.exports = function (app) {
         async (req, res) => {
             let techs = await controller.getAllTechs()
             console.dir(techs)
-            res.send('techs', {
+            res.render('techs', {
                 techs: techs,
             });
         });
@@ -33,10 +33,10 @@ module.exports = function (app) {
     app.get('/index',
         isAuthenticated,
         (req, res) => {
-        res.render('index', {
-            title: 'Dashboard'
+            res.render('index', {
+                title: 'Dashboard'
+            });
         });
-    });
     // inventory route
     app.get('/inventory', isAuthenticated, (req, res) => {
         res.render('inventory', {
