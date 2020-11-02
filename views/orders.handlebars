@@ -28,113 +28,113 @@
               Customers
             </a>
           </li>
-                              <li>
-                        <a href="techs">
-                            <span class="icon">
-                                <i class="fa fa-address-book"></i>
-                            </span>
-                            Technicians
-                        </a>
-                    </li>
           <li>
-            <a class='is-active' href="orders">
+            <a href="techs">
               <span class="icon">
-                <i class="fa fa-file-text-o"></i>
+                <i class="fas fa-hard-hat"></i>
               </span>
-              Orders
+              Technicians
+            </a>
+          </li>
+          <li>
+            <a href="orders">
+              <span class="icon">
+                <i class="fas fa-clipboard-list"></i>
+              </span>
+                 Orders
             </a>
           </li>
         </ul>
       </nav>
     </div>
 
-            <div class="column">
-                <h1 class="title">Orders</h1>
+    <div class="column">
+      <h1 class="title">Orders</h1>
 
-                <nav class="level">
-                    <div class="level-left">
-                        <div class="level-item">
-                            <p class="subtitle is-5"><strong>3</strong> orders</p>
-                        </div>
-                        <div class="leve-item is-hidden-tablet-only">
-                            <div class="field has-addons">
-                                <p>
-                                    <input type="text" class="input" placeholder="Order#, customer...">
-                                </p>
-                                <p class="control">
-                                    <button class="button">Search</button>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+      <nav class="level">
+        <div class="level-left">
+          <div class="level-item">
+            <p class="subtitle is-5"><strong>3</strong> orders</p>
+          </div>
+          <div class="leve-item is-hidden-tablet-only">
+            <div class="field has-addons">
+              <p>
+                <input type="text" class="input" placeholder="Order#, customer...">
+              </p>
+              <p class="control">
+                <button class="button">Search</button>
+              </p>
+            </div>
+          </div>
+        </div>
 
-                    {{!-- Disabled for future deployment --}}
-                    {{!-- <div class="level-right">
+        {{!-- Disabled for future deployment --}}
+        {{!-- <div class="level-right">
                         <p class="level-item"><strong>All</strong></p>
                         <p class="level-item"><a>In progress</a></p>
                         <p class="level-item"><a>Successful</a></p>
                         <p class="level-item"><a>Failed</a></p>
                     </div> --}}
-                </nav>
+      </nav>
 
-                <table class="table is-hoverable is-fullwidth">
-                    <thead>
-                        <tr>
-                            {{!-- Order references workorders table id --}}
-                            <th>Order #</th>
-                            {{!-- Customer references workorders table id, customers table first_name & last_name, concate customer name--}}
-                            <th>Customer</th>
-                            {{!-- Appoinment Date references workorders table appoinment --}}
-                            <th>Appoinment Date</th>
-                            {{!-- Products references workorders table pr_cd --}}
-                            <th>Products</th>
-                            {{!-- Reason references lkpreason table re_cd, return lkpreason table reason --}}
-                            <th>Reason</th>
-                            {{!-- Status references lkpstatus table st_cd, return lkpstatus table status --}}
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Order #</th>
-                            <th>Customer</th>
-                            <th>Date</th>
-                            <th>Products</th>
-                            <th>Reason</th>
-                            <th class="">Status</th>
-                        </tr>
-                    </tfoot>
-                    <tbody>
-                        <tr>
-                            <td><a href=""><strong>65423</strong></a></td>
-                            <td href="edit-customer.html">John Miller</td>
-                            <td>Oct 25, 12:34</td>
-                            <td>2</td>
-                            <td><span class="">New Install</span></td>
-                            <td><span class="tag is-info">Assigned</span></td>
-                            
-                        </tr>
-                        <tr>
-                            <td><a href="edit-order.html"><strong>275051</strong></a></td>
-                            <td href="edit-customer.html">Robin Dixon</td>
-                            <td>Oct 24, 15:30</td>
-                            <td>2</td>
-                            <td class="">Trouble call</td>
-                            <td><span class="tag is-success">Complete</span></td>
-                        </tr>
-                        <tr>
-                            <td><a href="edit-order.html"><strong>947564</strong></a></td>
-                            <td href="edit-customer.html">David Escalante</td>
-                            <td>Oct 23, 19:30</td>
-                            <td>2</td>
-                            <td class="">Pending</td>
-                            <td><span class="tag is-warning">Failed</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+      <table class="table is-hoverable is-fullwidth">
+        <thead>
+          <tr>
+            {{!-- Order references workorders table id --}}
+            <th>Order #</th>
+            {{!-- Customer references workorders table id, customers table first_name & last_name, concate customer name--}}
+            <th>Customer</th>
+            {{!-- Appoinment Date references workorders table appoinment --}}
+            <th>Appoinment Date</th>
+            {{!-- Products references workorders table pr_cd --}}
+            <th>Products</th>
+            {{!-- Reason references lkpreason table re_cd, return lkpreason table reason --}}
+            <th>Reason</th>
+            {{!-- Status references lkpstatus table st_cd, return lkpstatus table status --}}
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Order #</th>
+            <th>Customer</th>
+            <th>Date</th>
+            <th>Products</th>
+            <th>Reason</th>
+            <th class="">Status</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <td><a href=""><strong>65423</strong></a></td>
+            <td href="edit-customer.html">John Miller</td>
+            <td>Oct 25, 12:34</td>
+            <td>2</td>
+            <td><span class="">New Install</span></td>
+            <td><span class="tag is-info">Assigned</span></td>
 
-                {{!-- Disabled for future deployment --}}
-                {{!-- <nav class="pagination">
+          </tr>
+          <tr>
+            <td><a href="edit-order.html"><strong>275051</strong></a></td>
+            <td href="edit-customer.html">Robin Dixon</td>
+            <td>Oct 24, 15:30</td>
+            <td>2</td>
+            <td class="">Trouble call</td>
+            <td><span class="tag is-success">Complete</span></td>
+          </tr>
+          <tr>
+            <td><a href="edit-order.html"><strong>947564</strong></a></td>
+            <td href="edit-customer.html">David Escalante</td>
+            <td>Oct 23, 19:30</td>
+            <td>2</td>
+            <td class="">Pending</td>
+            <td><span class="tag is-warning">Failed</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      {{!-- Disabled for future deployment --}}
+      {{!-- <nav class="pagination">
                     <a class="pagination-previous">Previous</a>
                     <a class="pagination-next">Next</a>
                     <ul class="pagination-list">
@@ -148,6 +148,6 @@
                     </ul>
                 </nav> --}}
 
-            </div>
-        </div>
-    </section>
+    </div>
+  </div>
+</section>
