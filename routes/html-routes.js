@@ -12,7 +12,6 @@ module.exports = function (app) {
         // isAuthenticated,
         async (req, res) => {
             let customers = await controller.getAllCustomers()
-            console.dir(customers)
             res.render('customers', {
                 customers: customers,
                 title: 'Customers'
@@ -31,7 +30,9 @@ module.exports = function (app) {
 
     // dashboard route // main.handlebars route
     // Route to index.handlebars
-    app.get('/index', isAuthenticated, (req, res) => {
+    app.get('/index',
+        isAuthenticated,
+        (req, res) => {
         res.render('index', {
             title: 'Dashboard'
         });
