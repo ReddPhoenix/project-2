@@ -25,16 +25,26 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        createdAt: {
-            type: 'TIMESTAMP',
-            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
-            allowNull: false
-        },
-        updatedAt: {
-            type: 'TIMESTAMP',
-            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
-            allowNull: false
-        }
-    });
+        // createdAt: {
+        //     type: 'TIMESTAMP',
+        //     defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+        //     allowNull: false
+        // },
+        // updatedAt: {
+        //     type: 'TIMESTAMP',
+        //     defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+        //     allowNull: false
+        // }
+    },
+
+        {
+            timestamps: false,
+            tableName: 'Tech',
+            freezeTableName: true
+        });
+
+    Tech.associate = function (models) {
+        Tech.hasMany(models.Workorder, { foreignKey: 'techId' });
+    };
     return Tech;
 };

@@ -22,36 +22,50 @@ module.exports = function (app) {
         // isAuthenticated,
         async (req, res) => {
             let techs = await controller.getAllTechs()
-            console.dir(techs)
+            // console.dir(techs)
             res.render('techs', {
                 techs: techs,
+            });
+        });
+
+    app.get('/orders',
+        // isAuthenticated,
+        async (req, res) => {
+            let orders = await controller.getAllWorkorders()
+            // console.dir(workorders)
+            res.render('workorders', {
+                workorders: workorders,
             });
         });
 
     // dashboard route // main.handlebars route
     // Route to index.handlebars
     app.get('/index',
-        isAuthenticated,
+        // isAuthenticated,
         (req, res) => {
             res.render('index', {
                 title: 'Dashboard'
             });
         });
     // inventory route
-    app.get('/inventory', isAuthenticated, (req, res) => {
-        res.render('inventory', {
-            title: 'Inventory'
+    app.get('/inventory',
+        // isAuthenticated,
+        (req, res) => {
+            res.render('inventory', {
+                title: 'Inventory'
+            });
+            // res.send('inventory page');
         });
-        // res.send('inventory page');
-    });
     // login route
     app.get('/', function (req, res) {
         res.sendFile(path.join(__dirname, '../public/login.html'));
     });
     // orders route
-    app.get('/orders', isAuthenticated, function (req, res) {
-        res.render('orders', {
-            title: 'Orders'
+    app.get('/orders',
+        // isAuthenticated,
+        function (req, res) {
+            res.render('orders', {
+                title: 'Orders'
+            });
         });
-    });
 };

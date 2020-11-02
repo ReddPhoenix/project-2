@@ -31,11 +31,25 @@ module.exports = function (sequelize, DataTypes) {
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         }
-    });
+    },
+        {
+            tableName: 'Workorder',
+            freezeTableName: true
+        }
+    );
+
+    Workorder.associate = function (models) {
+        Workorder.belongsTo(models.Customer, {
+            foreignKey: { allowNull: false, name: 'custId' }
+        });
+        Workorder.belongsTo(models.Tech, {
+            foreignKey: { allowNull: false, name: 'techId' }
+        });
+    };
 
     // Workorder.associate = function (models) {
-    //     Workorder.belongsTo(models.Customer, {
-    //         foreignKey: { allowNull: false }
+    //     Workorder.belongsTo(models.Tech, {
+    //         foreignKey: { allowNull: false, name: 'techId' }
     //     });
     // };
 

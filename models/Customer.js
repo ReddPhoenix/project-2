@@ -39,23 +39,16 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        createdAt: {
-            type: 'TIMESTAMP',
-            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
-            allowNull: false
-        },
-        updatedAt: {
-            type: 'TIMESTAMP',
-            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
-            allowNull: false
-        }
-    });
+    },
+        {
+            timestamps: false,
+            tableName: 'Customer',
+            freezeTableName: true
+        });
 
-    // Customer.associate = function (models) {
-    //     Customer.hasMany(models.Workorder, {
-    //         // onDelete: 'cascade'
-    //     });
-    // };
+    Customer.associate = function (models) {
+        Customer.hasMany(models.Workorder, { foreignKey: 'custId' });
+    };
 
     return Customer;
 };
