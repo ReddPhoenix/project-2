@@ -4,7 +4,9 @@ const controller = require('../controllers/controller.js')
 
 module.exports = function (app) {
     app.post('/api/login', passport.authenticate('local'), function (req, res) {
+        app.locals.user = req.user.email;
         res.json(req.user);
+
     });
 
 

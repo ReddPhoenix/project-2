@@ -99,18 +99,20 @@
                     </tr>
                 </tfoot>
                 <tbody>
+                    {{#each customers}}
                     <tr>
                         <td>
                             <input type="checkbox">
                         </td>
                         <td>
                             <a href="edit-customer.html"><strong>
-                                    {{#each customers}}
-                                    <p>{{first_name}}</p>
-                                    {{/each}}
+
+                                    <p>{{first_name}} {{last_name}}</p>
+
+
                                 </strong></a>
                         </td>
-                        <td><code>johnmiller@example.com</code></td>
+                        <td><code>{{email}}</code></td>
                         <td>123 Main St</td>
                         <td>
                             <a href="customer-orders.html">10</a>
@@ -122,44 +124,8 @@
                             </div>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <input type="checkbox">
-                        </td>
-                        <td>
-                            <a href="edit-customer.html"><strong>Robin Dixon</strong></a>
-                        </td>
-                        <td><code>robindixon@example.com</code></td>
-                        <td>Canada</td>
-                        <td>
-                            <a href="customer-orders.html">8</a>
-                        </td>
-                        <td>
-                            <div class="buttons">
-                                <a href="edit-customer.html" class="button is-small">Edit</a>
-                                <a class="button is-small">Delete</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="checkbox">
-                        </td>
-                        <td>
-                            <a href="edit-customer.html"><strong>David Escalante</strong></a>
-                        </td>
-                        <td><code>davidescalante@example.com</code></td>
-                        <td>Mexico</td>
-                        <td>
-                            <a href="customer-orders.html">7</a>
-                        </td>
-                        <td>
-                            <div class="buttons">
-                                <a href="edit-customer.html" class="button is-small">Edit</a>
-                                <a class="button is-small">Delete</a>
-                            </div>
-                        </td>
-                    </tr>
+                    {{/each}}
+
                 </tbody>
             </table>
 
