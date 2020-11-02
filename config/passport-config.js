@@ -28,11 +28,11 @@ passport.use(new LocalStrategy(
 ));
 
 
-passport.serializeUser(function(user, cb) {
-    cb(null, user);
+passport.serializeUser(function (User, cb) {
+    cb(null, User);
 });
 
-passport.deserializeUser(function(obj, cb) {
+passport.deserializeUser(function (obj, cb) {
     cb(null, obj);
 });
 
