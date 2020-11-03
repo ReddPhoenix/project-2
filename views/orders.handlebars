@@ -41,7 +41,7 @@
               <span class="icon">
                 <i class="fas fa-clipboard-list"></i>
               </span>
-                 Orders
+              Orders
             </a>
           </li>
         </ul>
@@ -76,12 +76,15 @@
                         <p class="level-item"><a>Failed</a></p>
                     </div> --}}
       </nav>
+      {{#each workorders}}<p>{{Tech.first_name}}</p>
+      {{/each}}
 
       <table class="table is-hoverable is-fullwidth">
         <thead>
           <tr>
             {{!-- Order references workorders table id --}}
             <th>Order #</th>
+
             {{!-- Customer references workorders table id, customers table first_name & last_name, concate customer name--}}
             <th>Customer</th>
             {{!-- Appoinment Date references workorders table appoinment --}}

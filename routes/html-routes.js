@@ -9,7 +9,7 @@ var isAuthenticated = require('../config/middleware/isAuthenticated');
 module.exports = function (app) {
     // customers route
     app.get('/customers',
-        isAuthenticated,
+        // isAuthenticated,
         async (req, res) => {
             let customers = await controller.getAllCustomers()
             res.render('customers', {
@@ -20,7 +20,7 @@ module.exports = function (app) {
 
     // technicians route
     app.get('/techs',
-        isAuthenticated,
+        // isAuthenticated,
         async (req, res) => {
             let techs = await controller.getAllTechs()
             // console.dir(techs)
@@ -34,8 +34,9 @@ module.exports = function (app) {
         async (req, res) => {
             let orders = await controller.getAllWorkorders()
             // console.dir(workorders)
-            res.render('workorders', {
-                workorders: workorders,
+            // console.log(orders)
+            res.render('orders', {
+                workorders: orders,
             });
         });
 
@@ -60,22 +61,17 @@ module.exports = function (app) {
     // res.send('inventory page');
 
     // new customer route
-    app.get('/new-customer', isAuthenticated, (req, res) => {
-        res.render('new-customer', {
-            title: 'New Customer'
+    app.get('/new-customer',
+        // isAuthenticated, 
+        (req, res) => {
+            res.render('new-customer', {
+                title: 'New Customer'
+            });
+            // res.send('inventory page');
         });
-        // res.send('inventory page');
-    });
     // login route
     app.get('/', function (req, res) {
         res.sendFile(path.join(__dirname, '../public/login.html'));
     });
-    // orders route
-    app.get('/orders',
-        // isAuthenticated,
-        function (req, res) {
-            res.render('orders', {
-                title: 'Orders'
-            });
-        });
+
 };
