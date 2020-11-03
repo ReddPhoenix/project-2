@@ -15,10 +15,34 @@ $(document).ready(function () {
     // function for creating a new customer, calls getAllCustomers at the end
     function upsertNewCustomer(newCustomerData) {
         console.log(newCustomerData);
-        $.post('/api/new-customer', newCustomerData)
+        $.post('/api/new-customer', newCustomerData);
         // .then(getAllCustomers);
     }
-    
+
+
+    // modal for submit
+    function modalPopup() {
+        var button = document.getElementById('modal-button');
+        var modal = document.getElementById('page-modal');
+        var close = document.getElementsByClassName('modal-close')[0];
+
+        button.onclick = function () {
+            modal.style.display = 'block';
+            console.log('hit');
+        };
+
+        close.onclick = function () {
+            modal.style.display = 'none';
+            console.log('hit');
+        };
+
+        window.onclick = function (event) {
+            if (event.target.className == 'modal-background') {
+                modal.style.display = 'none';
+            }
+        };
+    }
+
     // function to handle new customer form being submitted to create the new customer
     function handleNewCustomerFormSubmit(event) {
 
@@ -34,7 +58,6 @@ $(document).ready(function () {
             phone: customerPhone.val().trim()
         });
     }
-    console.log('hit');
     // adding event listener to the form
-    $('#new-customer').on('submit', handleNewCustomerFormSubmit);
+    $('#new-customer').on('submit', handleNewCustomerFormSubmit),modalPopup();
 });
