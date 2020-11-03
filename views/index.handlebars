@@ -1,9 +1,11 @@
+{{!-- Menu links to access handlebar routes --}}
 <section class="section">
     <div class="columns">
         <div class="column is-4-tablet is-3-desktop is-2-widescreen">
             <nav class="menu">
                 <p class="menu-label">Menu</p>
                 <ul class="menu-list">
+                    {{!-- Dashboard menu link --}}
                     <li>
                         <a class='is-active' href="dashboard">
                             <span class="icon">
@@ -12,6 +14,7 @@
                             Dashboard
                         </a>
                     </li>
+                    {{!-- Inventory menu link --}}
                     <li>
                         <a href="inventory">
                             <span class="icon">
@@ -20,6 +23,7 @@
                             Inventory
                         </a>
                     </li>
+                    {{!-- Customers menu link --}}
                     <li>
                         <a href="customers">
                             <span class="icon">
@@ -28,6 +32,7 @@
                             Customers
                         </a>
                     </li>
+                    {{!-- Technicians menu link --}}
                     <li>
                         <a href="techs">
                             <span class="icon">
@@ -36,6 +41,7 @@
                             Technicians
                         </a>
                     </li>
+                    {{!-- Orders menu link --}}
                     <li>
                         <a href="orders">
                             <span class="icon">
@@ -48,6 +54,7 @@
             </nav>
         </div>
 
+        {{!-- Date & Dashboards timeframe selection (Timeframe disabled for future deployment) --}}
         <div class="column">
             <div class="level">
                 <div class="level-left">
@@ -72,7 +79,8 @@
                         {{!-- <span class="has-text-grey-light">Hello </span> <strong>Alex Johnson</strong></h1> --}}
                 </div>
 
-                <div class="level-right">
+                {{!-- Disabled for future deployment --}}
+                {{!-- <div class="level-right">
                     <div class="select">
                         <select>
                             <option>Today</option>
@@ -83,10 +91,12 @@
                             <option>All Time</option>
                         </select>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
+            {{!-- Dashboard tiles --}}
             <div class="columns is-multiline">
+                {{!-- Total Orders tile --}}
                 <div class="column is-12-tablet is-6-desktop is-3-widescreen">
                     <div class="notification is-link has-text">
                         <p class="title is-1">230</p>
@@ -94,13 +104,15 @@
                     </div>
                 </div>
 
+                {{!-- Open Orders tile --}}
                 <div class="column is-12-tablet is-6-desktop is-3-widescreen">
                     <div class="notification is-info has-text">
                         <p class="title is-1">29</p>
-                        <p class="subtitle is-4">Open</p>
+                        <p class="subtitle is-4">Open Orders</p>
                     </div>
                 </div>
 
+                {{!-- In Progress tile  --}}
                 <div class="column is-12-tablet is-6-desktop is-3-widescreen">
                     <div class="notification is-primary has-text">
                         <p class="title is-1">1,590</p>
@@ -108,13 +120,15 @@
                     </div>
                 </div>
 
+                {{!-- Closed Orders tile  --}}
                 <div class="column is-12-tablet is-6-desktop is-3-widescreen">
                     <div class="notification is-success has-text">
                         <p class="title is-1">30,632</p>
-                        <p class="subtitle is-4">Closed </p>
+                        <p class="subtitle is-4">Closed Orders</p>
                     </div>
                 </div>
 
+                {{!-- Type of Orders tile --}}
                 <div class="column is-12-tablet is-6-desktop is-4-fullhd">
                     <div class="card">
                         <div class="card-content">
@@ -199,7 +213,7 @@
                                 </div>
                                 <div class="media-content">
                                     <p class="title is-5 is-spaced is-marginless">
-                                        <a href="edit-book.html">DirecTv</a>
+                                        DirecTv
                                     </p>
                                 </div>
                                 <div class="media-right">
@@ -216,7 +230,7 @@
                                 </div>
                                 <div class="media-content">
                                     <p class="title is-5 is-spaced is-marginless">
-                                        <a href="edit-book.html">KfB</a>
+                                        KfB
                                     </p>
                                 </div>
                                 <div class="media-right">
@@ -233,7 +247,7 @@
                                 </div>
                                 <div class="media-content">
                                     <p class="title is-5 is-spaced is-marginless">
-                                        <a href="edit-book.html">Orby TV</a>
+                                        Orby TV
                                     </p>
                                 </div>
                                 <div class="media-right">
@@ -258,13 +272,15 @@
                                 </div>
                                 <div class="media-content">
                                     <p class="title is-5 is-spaced is-marginless">
-                                        <a href="edit-customer.html">John Miller</a>
+                                        <a href="techs">{{techs.1.first_name}} {{techs.1.last_name}}</a>
                                     </p>
                                     <p class="subtitle is-6">United States</p>
                                 </div>
-                                <div class="media-right">
+
+                                {{!-- Disabled for future deployment --}}
+                                {{!-- <div class="media-right">
                                     10 orders
-                                </div>
+                                </div> --}}
                             </div>
 
                             <div class="media">
@@ -273,13 +289,14 @@
                                 </div>
                                 <div class="media-content">
                                     <p class="title is-5 is-spaced is-marginless">
-                                        <a href="edit-customer.html">Robin Dixon</a>
+                                        <a href="techs">Robin Dixon</a>
                                     </p>
-                                    <p class="subtitle is-6">Canada</p>
+                                    <p class="subtitle is-6">United States</p>
                                 </div>
-                                <div class="media-right">
+                                {{!-- Disabled for future deployment --}}
+                                {{!-- <div class="media-right">
                                     8 orders
-                                </div>
+                                </div> --}}
                             </div>
 
                             <div class="media">
@@ -288,16 +305,17 @@
                                 </div>
                                 <div class="media-content">
                                     <p class="title is-5 is-spaced is-marginless">
-                                        <a href="edit-customer.html">David Escalante</a>
+                                        <a href="techs">David Escalante</a>
                                     </p>
-                                    <p class="subtitle is-6">Mexico</p>
+                                    <p class="subtitle is-6">United States</p>
                                 </div>
-                                <div class="media-right">
+                                {{!-- Disabled for future deployment --}}
+                                {{!-- <div class="media-right">
                                     7 orders
-                                </div>
+                                </div> --}}
                             </div>
 
-                            <a class="button is-link is-outlined" href="customers">View all customers</a>
+                            <a class="button is-link is-outlined" href="customers">View all technicians</a>
 
                         </div>
                     </div>
