@@ -16,13 +16,13 @@ module.exports = function (app) {
         res.json(workorders)
 
     });
+    
+    app.get('/api/test2/', async function (req, res) {
+        let techs = await controller.getAllTechs(3)
+        // res.send('test working')
+        res.json(techs)
 
-    // app.get('/api/test/', async function (req, res) {
-    //     let techs = await controller.getAllTeches()
-    //     // res.send('test working')
-    //     res.json(techs)
-
-    // });
+    });
 
     // Route for logging user out
     app.get('/logout', function (req, res) {
@@ -45,8 +45,9 @@ module.exports = function (app) {
         }
     });
 
-    app.post('/new-customer', function (req, res) {
-        db.Post.create(req.body).then(function(dbPost) {
+    app.post('/api/new-customer', function (req, res) {
+        console.log("inside", req.body)
+        db.Customer.create(req.body).then(function(dbPost) {
             res.json(dbPost);
         });
     });
