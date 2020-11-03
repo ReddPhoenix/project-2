@@ -1,6 +1,7 @@
 // const db = require('../models');
 const passport = require('../config/passport-config');
-const controller = require('../controllers/controller.js')
+const controller = require('../controllers/controller.js');
+const db = require('../models');
 
 module.exports = function (app) {
     app.post('/api/login', passport.authenticate('local'), function (req, res) {
@@ -42,5 +43,11 @@ module.exports = function (app) {
                 id: req.user.id
             });
         }
+    });
+
+    app.post('/new-customer', function (req, res) {
+        db.Post.create(req.body).then(function(dbPost) {
+            res.json(dbPost);
+        });
     });
 };
