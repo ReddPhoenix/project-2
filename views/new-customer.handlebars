@@ -53,7 +53,7 @@
                 <div class="container">
                     <div class="columns ">
                         <div class="column is-10-tablet is-6-desktop is-5-widescreen">
-                            <form class="box login" id="new-customer" >
+                            <form class="box login" id="new-customer">
                                 <div class="field has-text-centered">
                                     <!-- placeholder image -->
                                     <img src='./assets/images/checkmark-logo.png' alt="taskably company logo"
@@ -142,11 +142,30 @@
                                     </div>
                                 </div>
                                 <div class="field">
-                                    <button class="button is-success" type="submit">Create</button>
+                                    <button class="button is-success" type="submit" id="modal-button">Create</button>
+                                    <div class="modal" id="page-modal">
+                                <div class="modal-background"></div>
+                            {{!-- attempting a modal --}}
+                                <div class="modal-content">
+                                    <div class="section">
+                                        <div class="card">
+                                            <div class="card-content">
+                                                <p class="title">
+                                                    Customer successfully created
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="modal-close is-large" aria-label="close"></button>
                                 </div>
+                            </div>
+                                </div>
+
                             </form>
                         </div>
                     </div>
                 </div>
-            </div>
+
+
+
         </section>

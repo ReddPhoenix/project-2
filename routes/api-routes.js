@@ -10,13 +10,12 @@ module.exports = function (app) {
 
     });
 
-
     app.get('/api/test/', async function (req, res) {
         let workorders = await controller.getAllWorkorders()
         res.json(workorders)
 
     });
-    
+
     app.get('/api/test2/', async function (req, res) {
         let techs = await controller.getAllTechs(3)
         // res.send('test working')
@@ -47,7 +46,7 @@ module.exports = function (app) {
 
     app.post('/api/new-customer', function (req, res) {
         console.log("inside", req.body)
-        db.Customer.create(req.body).then(function(dbPost) {
+        db.Customer.create(req.body).then(function (dbPost) {
             res.json(dbPost);
         });
     });
