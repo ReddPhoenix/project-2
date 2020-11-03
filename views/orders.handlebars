@@ -57,14 +57,15 @@
             <p class="subtitle is-5"><strong>3</strong> orders</p>
           </div>
           <div class="leve-item is-hidden-tablet-only">
-            <div class="field has-addons">
+            {{!-- Disabled for future deployment --}}
+            {{!-- <div class="field has-addons">
               <p>
                 <input type="text" class="input" placeholder="Order#, customer...">
               </p>
               <p class="control">
                 <button class="button">Search</button>
               </p>
-            </div>
+            </div> --}}
           </div>
         </div>
 
@@ -74,65 +75,48 @@
                         <p class="level-item"><a>In progress</a></p>
                         <p class="level-item"><a>Successful</a></p>
                         <p class="level-item"><a>Failed</a></p>
-                    </div> --}}
+              </div> --}}
       </nav>
-      {{#each workorders}}<p>{{Tech.first_name}}</p>
-      {{/each}}
+
+
 
       <table class="table is-hoverable is-fullwidth">
         <thead>
-          <tr>
-            {{!-- Order references workorders table id --}}
-            <th>Order #</th>
 
-            {{!-- Customer references workorders table id, customers table first_name & last_name, concate customer name--}}
-            <th>Customer</th>
-            {{!-- Appoinment Date references workorders table appoinment --}}
+          <tr>
+            <th>Order #</th>
+            <th>Technician</th>
+            <th>Customer Name</th>
             <th>Appoinment Date</th>
-            {{!-- Products references workorders table pr_cd --}}
             <th>Products</th>
-            {{!-- Reason references lkpreason table re_cd, return lkpreason table reason --}}
             <th>Reason</th>
-            {{!-- Status references lkpstatus table st_cd, return lkpstatus table status --}}
             <th>Status</th>
           </tr>
+
         </thead>
         <tfoot>
           <tr>
             <th>Order #</th>
-            <th>Customer</th>
-            <th>Date</th>
+            <th>Technician</th>
+            <th>Customer Name</th>
+            <th>Appointment Date</th>
             <th>Products</th>
             <th>Reason</th>
             <th class="">Status</th>
           </tr>
         </tfoot>
         <tbody>
+          {{#each workorders}}
           <tr>
-            <td><a href=""><strong>65423</strong></a></td>
-            <td href="edit-customer.html">John Miller</td>
-            <td>Oct 25, 12:34</td>
-            <td>2</td>
-            <td><span class="">New Install</span></td>
-            <td><span class="tag is-info">Assigned</span></td>
-
+            <td><a href=""><strong> {{id}}</strong></a></td>
+            <td>{{Tech.first_name}} {{Tech.last_name}}</td>
+            <td>{{Customer.first_name}} {{Customer.last_name}}</td>
+            <td>{{appt_date}}</td>
+            <td>{{products}}</td>
+            <td><span class="">{{reason}}</span></td>
+            <td><span class="tag is-info">{{status}}</span></td>
           </tr>
-          <tr>
-            <td><a href="edit-order.html"><strong>275051</strong></a></td>
-            <td href="edit-customer.html">Robin Dixon</td>
-            <td>Oct 24, 15:30</td>
-            <td>2</td>
-            <td class="">Trouble call</td>
-            <td><span class="tag is-success">Complete</span></td>
-          </tr>
-          <tr>
-            <td><a href="edit-order.html"><strong>947564</strong></a></td>
-            <td href="edit-customer.html">David Escalante</td>
-            <td>Oct 23, 19:30</td>
-            <td>2</td>
-            <td class="">Pending</td>
-            <td><span class="tag is-warning">Failed</span></td>
-          </tr>
+          {{/each}}
         </tbody>
       </table>
 
