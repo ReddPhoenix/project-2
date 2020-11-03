@@ -88,9 +88,10 @@
             <table class="table is-hoverable is-fullwidth">
                 <thead>
                     <tr>
-                        <th class="is-narrow">
+                        {{!-- Disabled for future deployment --}}
+                        {{!-- <th class="is-narrow">
                             <input type="checkbox">
-                        </th>
+                        </th> --}}
                         <th>Name</th>
                         <th>Email</th>
                         {{!-- <th>Address</th> --}}
@@ -100,9 +101,10 @@
                 </thead>
                 <tfoot>
                     <tr>
-                        <th class="is-narrow">
+                        {{!-- Disabled for future deployment --}}
+                        {{!-- <th class="is-narrow">
                             <input type="checkbox">
-                        </th>
+                        </th> --}}
                         <th>Name</th>
                         <th>Email</th>
                         {{!-- <th>Address</th> --}}
@@ -113,19 +115,17 @@
                 <tbody>
                     {{#each techs}}
                     <tr>
-                        <td>
+                        {{!-- Disabled for future deployment --}}
+                        {{!-- <td>
                             <input type="checkbox">
-                        </td>
+                        </td> --}}
                         <td>
-                            <a href="edit-customer.html"><strong>
-
-                                    <p>{{first_name}} {{last_name}}</p>
-
-
-                                </strong></a>
+                            <strong>
+                                <p>{{first_name}} {{last_name}}</p>
+                            </strong></a>
                         </td>
                         <td><code>{{email}}</code></td>
-  
+
                         {{!-- <td>
                             <a href="customer-orders.html">10</a>
                         </td> --}}
