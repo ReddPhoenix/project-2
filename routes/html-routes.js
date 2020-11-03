@@ -26,6 +26,7 @@ module.exports = function (app) {
             // console.dir(techs)
             res.render('techs', {
                 techs: techs,
+                title: 'Technicians'
             });
         });
 
@@ -36,7 +37,7 @@ module.exports = function (app) {
             // console.dir(workorders)
             // console.log(orders)
             res.render('orders', {
-                workorders: orders,
+                workorders: orders
             });
         });
 
