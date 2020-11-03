@@ -47,11 +47,5 @@ module.exports = function (sequelize, DataTypes) {
         });
     };
 
-    // Workorder.associate = function (models) {
-    //     Workorder.belongsTo(models.Tech, {
-    //         foreignKey: { allowNull: false, name: 'techId' }
-    //     });
-    // };
-
     return Workorder;
 };
