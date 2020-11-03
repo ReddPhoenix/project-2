@@ -22,13 +22,15 @@ module.exports = {
 
             })
         return orders
+    },
+    getCountWorkorders: async () => {
+        let countWO = (await db.Workorder.count())
+        return countWO
     }
+
+    // insertCustomer: async()=>{
+    //     let new =(await db.Customer.create(req.body))
+    // },
 };
-
-
-// db.Customer.findAll({})
-//     .then(res => {
-//         console.log('result: ', res);
-//     });
 
 console.log('controller is working: ', db.Tech);
