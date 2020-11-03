@@ -10,16 +10,18 @@ $(document).ready(function () {
     var customerPhone = $(phone);
 
     // getting the initial customer
-    getAllCustomers();
+    // getAllCustomers();
 
     // function for creating a new customer, calls getAllCustomers at the end
     function upsertNewCustomer(newCustomerData) {
+        console.log(newCustomerData);
         $.post('/api/new-customer', newCustomerData)
-            .then(getAllCustomers);
+        // .then(getAllCustomers);
     }
-
+    
     // function to handle new customer form being submitted to create the new customer
     function handleNewCustomerFormSubmit(event) {
+
         event.preventDefault();
         upsertNewCustomer({
             first_name: firstName.val().trim(),
@@ -32,7 +34,7 @@ $(document).ready(function () {
             phone: customerPhone.val().trim()
         });
     }
-
+    console.log('hit');
     // adding event listener to the form
-    $(document).on('submit', '#new-customer', handleNewCustomerFormSubmit());
+    $('#new-customer').on('submit', handleNewCustomerFormSubmit);
 });

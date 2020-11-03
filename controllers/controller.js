@@ -6,8 +6,9 @@ module.exports = {
             .map(customer => customer.dataValues)
 
     },
-    getAllTechs: async () => {
-        return (await db.Tech.findAll({}))
+    // If count is negative get All Techs
+    getAllTechs: async (count) => {
+        return (await db.Tech.findAll(count > 0 ? { limit: count } : {}))
             .map(tech => tech.dataValues)
     },
     getAllWorkorders: async () => {
@@ -28,6 +29,7 @@ module.exports = {
         return countWO
     }
 
+    // Create New Customer Query
     // insertCustomer: async()=>{
     //     let new =(await db.Customer.create(req.body))
     // },

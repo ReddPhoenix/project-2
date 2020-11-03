@@ -266,13 +266,14 @@
                         <div class="card-content">
                             <h2 class="title is-4">Technicians</h2>
 
+                            {{#each techs}}
                             <div class="media">
                                 <div class="media-left is-marginless">
-                                    <p class="number">1</p>
+                                    <p class="number">{{id}}</p>
                                 </div>
                                 <div class="media-content">
                                     <p class="title is-5 is-spaced is-marginless">
-                                        <a href="techs">{{techs.1.first_name}} {{techs.1.last_name}}</a>
+                                        <a href="techs">{{first_name}} {{last_name}}</a>
                                     </p>
                                     <p class="subtitle is-6">United States</p>
                                 </div>
@@ -282,38 +283,9 @@
                                     10 orders
                                 </div> --}}
                             </div>
+                            {{/each}}
 
-                            <div class="media">
-                                <div class="media-left is-marginless">
-                                    <p class="number">2</p>
-                                </div>
-                                <div class="media-content">
-                                    <p class="title is-5 is-spaced is-marginless">
-                                        <a href="techs">Robin Dixon</a>
-                                    </p>
-                                    <p class="subtitle is-6">United States</p>
-                                </div>
-                                {{!-- Disabled for future deployment --}}
-                                {{!-- <div class="media-right">
-                                    8 orders
-                                </div> --}}
-                            </div>
 
-                            <div class="media">
-                                <div class="media-left is-marginless">
-                                    <p class="number">3</p>
-                                </div>
-                                <div class="media-content">
-                                    <p class="title is-5 is-spaced is-marginless">
-                                        <a href="techs">David Escalante</a>
-                                    </p>
-                                    <p class="subtitle is-6">United States</p>
-                                </div>
-                                {{!-- Disabled for future deployment --}}
-                                {{!-- <div class="media-right">
-                                    7 orders
-                                </div> --}}
-                            </div>
 
                             <a class="button is-link is-outlined" href="techs">View all technicians</a>
 

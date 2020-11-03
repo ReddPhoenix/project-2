@@ -44,9 +44,11 @@ module.exports = function (app) {
     // Route to index.handlebars
     app.get('/index',
         // isAuthenticated,
-        (req, res) => {
+        async (req, res) => {
+            let techs = await controller.getAllTechs(3)
             res.render('index', {
-                title: 'Dashboard'
+                title: 'Dashboard',
+                techs: techs
             });
         });
     // inventory route
