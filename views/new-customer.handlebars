@@ -116,7 +116,7 @@
                                 <div class="field">
                                     <label class="label">State</label>
                                     <div class="control has-icons-left">
-                                        <input class="input" type="text" placeholder="e.g. Utah" id="state" required>
+                                        <input class="input" type="text" placeholder="e.g. UT" id="state" maxlength="2" style="text-transform:uppercase" required>
                                         <span class="icon is-small is-left">
                                             <i class="fas fa-map-marked-alt"></i>
                                         </span>
@@ -125,16 +125,16 @@
                                 <div class="field">
                                     <label class="label">Zip Code</label>
                                     <div class="control has-icons-left">
-                                        <input class="input" type="text" placeholder="e.g. 84101" id="zip" required>
+                                        <input class="input" type="text" placeholder="e.g. 84101" id="zip" maxlength="5" required>
                                         <span class="icon is-small is-left">
                                             <i class="fas fa-map-marked-alt"></i>
                                         </span>
                                     </div>
                                 </div>
                                 <div class="field">
-                                    <label class="label">Phone Number</label>
+                                    <label class="label" for="phone">Phone Number</label>
                                     <div class="control has-icons-left">
-                                        <input class="input" type="text" placeholder="e.g. 801-555-0000" id="phone"
+                                        <input class="input" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="e.g. 801-555-0000" id="phone" maxlength="12"
                                             required>
                                         <span class="icon is-small is-left">
                                             <i class="fas fa-phone-office"></i>
