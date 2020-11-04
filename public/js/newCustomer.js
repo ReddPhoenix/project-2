@@ -12,28 +12,17 @@ $(document).ready(function () {
     // getting the initial customer
     // getAllCustomers();
 
-    // function for creating a new customer, calls getAllCustomers at the end
-    function upsertNewCustomer(newCustomerData) {
-        console.log(newCustomerData);
-        $.post('/api/new-customer', newCustomerData);
-        // .then(getAllCustomers);
-    }
-
-
     // modal for submit
     function modalPopup() {
-        var button = document.getElementById('modal-button');
         var modal = document.getElementById('page-modal');
         var close = document.getElementsByClassName('modal-close')[0];
 
-        button.onclick = function () {
-            modal.style.display = 'block';
-            console.log('hit');
-        };
+        modal.style.display = 'flex';
+
+        // };
 
         close.onclick = function () {
             modal.style.display = 'none';
-            console.log('hit');
         };
 
         window.onclick = function (event) {
@@ -42,6 +31,18 @@ $(document).ready(function () {
             }
         };
     }
+    // function for creating a new customer, calls getAllCustomers at the end
+    function upsertNewCustomer(newCustomerData) {
+        console.log(newCustomerData);
+        $.post('/api/new-customer', newCustomerData)
+            .then(function(data) {
+                console.log(data);
+                modalPopup();
+            });
+        // .then(getAllCustomers);
+    }
+
+
 
     // function to handle new customer form being submitted to create the new customer
     function handleNewCustomerFormSubmit(event) {
@@ -59,5 +60,5 @@ $(document).ready(function () {
         });
     }
     // adding event listener to the form
-    $('#new-customer').on('submit', handleNewCustomerFormSubmit), modalPopup();
+    $('#new-customer').on('submit', handleNewCustomerFormSubmit);
 });
