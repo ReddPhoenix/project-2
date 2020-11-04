@@ -33,6 +33,7 @@ module.exports = function (app) {
     app.get('/orders',
         // isAuthenticated,
         async (req, res) => {
+            console.log('===================== hit  ================')
             let orders = await controller.getAllWorkorders()
             // console.dir(workorders)
             // console.log(orders)
