@@ -43,7 +43,7 @@ module.exports = function (sequelize, DataTypes) {
             foreignKey: { allowNull: false, name: 'custId' }
         });
         Workorder.belongsTo(models.Tech, {
-            foreignKey: { allowNull: false, name: 'techId' }
+            foreignKey: { name: 'techId' }
         });
     };
 
