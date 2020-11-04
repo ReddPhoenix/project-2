@@ -48,9 +48,11 @@ module.exports = function (app) {
         // isAuthenticated,
         async (req, res) => {
             let techs = await controller.getAllTechs(3)
+            let countWO = await controller.getCountWorkorders()
             res.render('index', {
                 title: 'Dashboard',
-                techs: techs
+                techs: techs,
+                countWO: countWO
             });
         });
     // inventory route

@@ -15,14 +15,23 @@ values(1,'Prinz','Gomme','pgomme0@tamu.edu','617 Moulton Center','Billings','MT'
 ,(14,'Odella','Nannizzi','onannizzid@mysql.com','90218 Michigan Pass','Redwood City','CA',94064,'650-571-0713')
 ;
 
-insert into Tech (first_name,last_name,email,phone)
+insert into Tech (first_name, last_name, email, phone)
 values
-('Archy',	'Pearn',	'apearn0@kickstarter.com',	'221-590-5937')
-,('Nickolai',	'Lindsey',	'nlindsey1@networkadvertising.org',	'184-555-3156')
+('Archy', 'Pearn', 'apearn0@kickstarter.com', '221-590-5937')
+,('Nickolai', 'Lindsey', 'nlindsey1@networkadvertising.org', '184-555-3156')
 ,('Luise',	'Couve',	'lcouve2@w3.org',	'340-405-8770')
-,('Delmor',	'Bowen'	,'dbowen3@oracle.com'	,'712-255-6542')
-,('Jen',	'Larderot',	'jlarderot4@timesonline.co.uk',	'401-125-3320')
-,('Ingelbert'	,'Mokes'	,'imokes5@goodreads.com',	'393-543-7068')
-,('Del',	'Bellenger',	'dbellenger6@aol.com',	'862-180-5147')
-,('Avrom'	,'Dunlop',	'adunlop7@typepad.com',	'941-139-0504')
+,('Delmor',	'Bowen', 'dbowen3@oracle.com', '712-255-6542')
+,('Jen', 'Larderot', 'jlarderot4@timesonline.co.uk', '401-125-3320')
+,('Ingelbert', 'Mokes', 'imokes5@goodreads.com', '393-543-7068')
+,('Del', 'Bellenger', 'dbellenger6@aol.com', '862-180-5147')
+,('Avrom', 'Dunlop', 'adunlop7@typepad.com', '941-139-0504')
+;
+
+insert into Workorder (appt_date, products, reason, status, custId, techId)
+values
+('2020-10-31 14:30','DirecTv','New Install','Complete', 2,8)
+,(null,'KfB','Service Call','Pending', 3,null)
+,('2020-11-15 08:00','Orby TV','Trouble Call','Assigned', 4,6)
+,('2020-10-03 16:15','Viasat','New Install','Complete', 7,5)
+,('2020-12-03 16:45','DTV VS','Trouble Call','Assigned', 8,7)
 ;

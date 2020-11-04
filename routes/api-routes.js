@@ -23,6 +23,11 @@ module.exports = function (app) {
 
     });
 
+    app.get('/api/test3/', async function (req, res) {
+        let countWO = await controller.getCountWorkorders()
+        res.json(countWO)
+    })
+
     // Route for logging user out
     app.get('/logout', function (req, res) {
         req.logout();

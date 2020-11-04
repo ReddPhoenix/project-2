@@ -37,7 +37,7 @@ $(document).ready(function () {
         };
 
         window.onclick = function (event) {
-            if (event.target.className == 'modal-background') {
+            if (event.target.className === 'modal-background') {
                 modal.style.display = 'none';
             }
         };
@@ -59,5 +59,5 @@ $(document).ready(function () {
         });
     }
     // adding event listener to the form
-    $('#new-customer').on('submit', handleNewCustomerFormSubmit),modalPopup();
+    $('#new-customer').on('submit', handleNewCustomerFormSubmit), modalPopup();
 });
