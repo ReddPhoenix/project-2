@@ -28,6 +28,12 @@ module.exports = function (app) {
         res.json(countWO)
     })
 
+    app.get('/api/test4/', async function (req, res) {
+        let countWoT = await controller.getCountWoTC()
+        res.json(countWoT)
+    })
+
+
     // Route for logging user out
     app.get('/logout', function (req, res) {
         req.logout();

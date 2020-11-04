@@ -9,7 +9,7 @@ var isAuthenticated = require('../config/middleware/isAuthenticated');
 module.exports = function (app) {
     // customers route
     app.get('/customers',
-        // isAuthenticated,
+        isAuthenticated,
         async (req, res) => {
             let customers = await controller.getAllCustomers()
             res.render('customers', {
@@ -20,7 +20,7 @@ module.exports = function (app) {
 
     // technicians route
     app.get('/techs',
-        // isAuthenticated,
+        isAuthenticated,
         async (req, res) => {
             let techs = await controller.getAllTechs()
             // console.dir(techs)
@@ -31,33 +31,48 @@ module.exports = function (app) {
         });
 
     app.get('/orders',
-        // isAuthenticated,
+        isAuthenticated,
         async (req, res) => {
             console.log('===================== hit  ================')
             let orders = await controller.getAllWorkorders()
+            let countWO = await controller.getCountWorkorders()
             // console.dir(workorders)
             // console.log(orders)
             res.render('orders', {
-                workorders: orders
+                workorders: orders,
+                countWO: countWO
             });
         });
 
     // dashboard route // main.handlebars route
     // Route to index.handlebars
     app.get('/index',
-        // isAuthenticated,
+        isAuthenticated,
         async (req, res) => {
             let techs = await controller.getAllTechs(3)
             let countWO = await controller.getCountWorkorders()
+            let countWoP = await controller.getCountWoPend()
+            let countWoA = await controller.getCountWoAsd()
+            let countWoC = await controller.getCountWoCom()
+            let countWoN = await controller.getCountWoNI()
+            let countWoS = await controller.getCountWoSC()
+            let countWoT = await controller.getCountWoTC()
+
             res.render('index', {
                 title: 'Dashboard',
                 techs: techs,
-                countWO: countWO
+                countWO: countWO,
+                countWoP: countWoP,
+                countWoA: countWoA,
+                countWoC: countWoC,
+                countWoN: countWoN,
+                countWoS: countWoS,
+                countWoT: countWoT
             });
         });
     // inventory route
     app.get('/inventory',
-        // isAuthenticated,
+        isAuthenticated,
         (req, res) => {
             res.render('inventory', {
                 title: 'Inventory'
@@ -68,7 +83,7 @@ module.exports = function (app) {
 
     // new customer route
     app.get('/new-customer',
-        // isAuthenticated, 
+        isAuthenticated,
         (req, res) => {
             res.render('new-customer', {
                 title: 'New Customer'

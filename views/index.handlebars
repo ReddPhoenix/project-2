@@ -99,32 +99,32 @@
                 {{!-- Total Orders tile --}}
                 <div class="column is-12-tablet is-6-desktop is-3-widescreen">
                     <div class="notification is-link has-text">
-                        <p class="title is-1">{{ countWO }}</p>
-                        <p class="subtitle is-4">Total Orders</p>
+                        <p class="title is-1">{{countWO}}</p>
+                        <p class="subtitle is-4">Total Workorders</p>
                     </div>
                 </div>
 
                 {{!-- Open Orders tile --}}
                 <div class="column is-12-tablet is-6-desktop is-3-widescreen">
                     <div class="notification is-info has-text">
-                        <p class="title is-1">29</p>
-                        <p class="subtitle is-4">Open Orders</p>
+                        <p class="title is-1">{{countWoP}}</p>
+                        <p class="subtitle is-4">Pending Workorders</p>
                     </div>
                 </div>
 
                 {{!-- In Progress tile  --}}
                 <div class="column is-12-tablet is-6-desktop is-3-widescreen">
                     <div class="notification is-primary has-text">
-                        <p class="title is-1">1,590</p>
-                        <p class="subtitle is-4">In Progress</p>
+                        <p class="title is-1">{{countWoA}}</p>
+                        <p class="subtitle is-4">Assigned Workorders</p>
                     </div>
                 </div>
 
                 {{!-- Closed Orders tile  --}}
                 <div class="column is-12-tablet is-6-desktop is-3-widescreen">
                     <div class="notification is-success has-text">
-                        <p class="title is-1">30,632</p>
-                        <p class="subtitle is-4">Closed Orders</p>
+                        <p class="title is-1">{{countWoC}}</p>
+                        <p class="subtitle is-4">Completed Workorders</p>
                     </div>
                 </div>
 
@@ -132,7 +132,7 @@
                 <div class="column is-12-tablet is-6-desktop is-4-fullhd">
                     <div class="card">
                         <div class="card-content">
-                            <h2 class="title is-4">Orders</h2>
+                            <h2 class="title is-4">Calls</h2>
 
                             <div class="level">
                                 <div class="level-left">
@@ -148,7 +148,8 @@
 
                                 <div class="level-right">
                                     <div class="has-text-right">
-                                        <p class="tag is-success is-5 is-marginless is-large has-text-weight-bold">1435
+                                        <p class="tag is-success is-5 is-marginless is-large has-text-weight-bold">
+                                            {{countWoN}}
                                         </p>
 
                                     </div>
@@ -169,7 +170,8 @@
                                 </div>
                                 <div class="level-right">
                                     <div class="has-text-right">
-                                        <p class="tag is-warning is-5 is-marginless is-large has-text-weight-bold">520
+                                        <p class="tag is-warning is-5 is-marginless is-large has-text-weight-bold">
+                                            {{countWoS}}
                                         </p>
                                     </div>
                                 </div>
@@ -188,7 +190,8 @@
                                 </div>
                                 <div class="level-right">
                                     <div class="has-text-right">
-                                        <p class="tag is-danger is-5 is-marginless is-large has-text-weight-bold">39</p>
+                                        <p class="tag is-danger is-5 is-marginless is-large has-text-weight-bold">
+                                            {{countWoT}}</p>
                                     </div>
                                 </div>
                             </div>
