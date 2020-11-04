@@ -19,26 +19,25 @@ module.exports = {
     getAllWorkorders: async () => {
         try {
             let orders = (await db.Workorder.findAll({
-                // raw: true,
                 include: [db.Tech, db.Customer]
 
             }))
                 .map(workorders => {
-                    // console.log(workorders.appt_date)
-                    // console.log(new Date(workorders.appt_date).toDateString())
+                    // if Tech is not null return both Tech and Customer
                     if (workorders.dataValues.Tech) {
                         workorders.dataValues.Tech = workorders.dataValues.Tech.dataValues
                         workorders.dataValues.Customer = workorders.dataValues.Customer.dataValues
                     }
-                    // workorders.dataValues.Tech = workorders.dataValues.Tech.dataValues
+                    // else just return Customer
                     else {
                         workorders.dataValues.Customer = workorders.dataValues.Customer.dataValues
                     }
-                    // workorders.appt_date = new Date(workorders.app_date).toDateString()
-                    if (workorders.dataValues.appt_date) { workorders.dataValues.appt_date = new Date(workorders.dataValues.appt_date).toLocaleString() } else { null }
-                    console.log(workorders.dataValues.appt_date)
+                    // reformats date
+                    if (workorders.dataValues.appt_date) { workorders.dataValues.appt_date = new Date(workorders.dataValues.appt_date).toLocaleString() }
+                    else {
+                        null
+                    }
                     return workorders.dataValues
-
                 })
             return orders
         }
@@ -48,6 +47,72 @@ module.exports = {
         try {
             let countWO = (await db.Workorder.count())
             return countWO
+        }
+        catch (err) { console.error(err) }
+    },
+    getCountWoPend: async () => {
+        try {
+            let countWoP = (await db.Workorder.count({
+                where: {
+                    status: 'Pending'
+                }
+            }))
+            return countWoP
+        }
+        catch (err) { console.error(err) }
+    },
+    getCountWoAsd: async () => {
+        try {
+            let countWoA = (await db.Workorder.count({
+                where: {
+                    status: 'Assigned'
+                }
+            }))
+            return countWoA
+        }
+        catch (err) { console.error(err) }
+    },
+    getCountWoCom: async () => {
+        try {
+            let countWoC = (await db.Workorder.count({
+                where: {
+                    status: 'Complete'
+                }
+            }))
+            return countWoC
+        }
+        catch (err) { console.error(err) }
+    },
+    getCountWoNI: async () => {
+        try {
+            let countWoN = (await db.Workorder.count({
+                where: {
+                    reason: 'New Install'
+                }
+            }))
+            return countWoN
+        }
+        catch (err) { console.error(err) }
+    },
+    getCountWoSC: async () => {
+        try {
+            let countWoS = (await db.Workorder.count({
+                where: {
+                    reason: 'Service Call'
+                }
+            }))
+            return countWoS
+        }
+        catch (err) { console.error(err) }
+    },
+    getCountWoTC: async () => {
+        try {
+            let countWoT = (await db.Workorder.count({
+                where: {
+                    reason: 'Service Call'
+                }
+            }))
+            return countWoT
         }
         catch (err) { console.error(err) }
     }
