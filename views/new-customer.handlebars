@@ -55,7 +55,6 @@
                         <div class="column is-10-tablet is-6-desktop is-5-widescreen">
                             <form class="box login" id="new-customer">
                                 <div class="field has-text-centered">
-                                    <!-- placeholder image -->
                                     <img src='./assets/images/checkmark-logo.png' alt="taskably company logo"
                                         width="30"><span
                                         class="text has-text-weight-bold is-size-3 has-text-justified">Create New
@@ -116,7 +115,8 @@
                                 <div class="field">
                                     <label class="label">State</label>
                                     <div class="control has-icons-left">
-                                        <input class="input" type="text" placeholder="e.g. UT" id="state" maxlength="2" style="text-transform:uppercase" required>
+                                        <input class="input" type="text" placeholder="e.g. UT" id="state" maxlength="2"
+                                            style="text-transform:uppercase" required>
                                         <span class="icon is-small is-left">
                                             <i class="fas fa-map-marked-alt"></i>
                                         </span>
@@ -125,7 +125,8 @@
                                 <div class="field">
                                     <label class="label">Zip Code</label>
                                     <div class="control has-icons-left">
-                                        <input class="input" type="text" placeholder="e.g. 84101" id="zip" maxlength="5" required>
+                                        <input class="input" type="text" placeholder="e.g. 84101" id="zip" maxlength="5"
+                                            required>
                                         <span class="icon is-small is-left">
                                             <i class="fas fa-map-marked-alt"></i>
                                         </span>
@@ -134,8 +135,8 @@
                                 <div class="field">
                                     <label class="label" for="phone">Phone Number</label>
                                     <div class="control has-icons-left">
-                                        <input class="input" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="e.g. 801-555-0000" id="phone" maxlength="12"
-                                            required>
+                                        <input class="input" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                            placeholder="e.g. 801-555-0000" id="phone" maxlength="12" required>
                                         <span class="icon is-small is-left">
                                             <i class="fas fa-phone-office"></i>
                                         </span>
@@ -144,28 +145,26 @@
                                 <div class="field">
                                     <button class="button is-success" type="submit" id="modal-button">Create</button>
                                     <div class="modal" id="page-modal">
-                                <div class="modal-background"></div>
-                            {{!-- attempting a modal --}}
-                                <div class="modal-content">
-                                    <div class="section">
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <p class="title">
-                                                    Customer successfully created
-                                                </p>
+                                        <div class="modal-background">
+                                        </div>
+                                        <div class="modal-content">
+                                            <div class="section">
+                                                <div class="card">
+                                                    <div class="card-content">
+                                                        <p class="title">
+                                                            Customer successfully created
+                                                        </p>
+                                                    </div>
+                                                </div>
                                             </div>
+                                            <button class="modal-close is-large" aria-label="close"></button>
                                         </div>
                                     </div>
-                                    <button class="modal-close is-large" aria-label="close"></button>
                                 </div>
-                            </div>
-                                </div>
-
                             </form>
                         </div>
                     </div>
                 </div>
-
-
-
         </section>
+    </div>
+</section>

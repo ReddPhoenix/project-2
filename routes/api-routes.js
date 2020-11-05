@@ -1,12 +1,11 @@
 const passport = require('../config/passport-config');
-// const controller = require('../controllers/controller.js');
 const db = require('../models');
 
 module.exports = function (app) {
+    // Route for login screen
     app.post('/api/login', passport.authenticate('local'), function (req, res) {
         app.locals.user = req.user.email;
         res.json(req.user);
-
     });
 
     // Route for logging user out
@@ -29,6 +28,7 @@ module.exports = function (app) {
         }
     });
 
+    // Route for creating a new customer
     app.post('/api/new-customer', function (req, res) {
         db.Customer.create(req.body).then(function (dbPost) {
             res.json(dbPost);

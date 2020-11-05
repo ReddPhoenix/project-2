@@ -34,11 +34,11 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         }
     },
-        // Don't create time stamp, don't pluralize the table name
-        {
-            tableName: 'Workorder',
-            freezeTableName: true
-        }
+    // Don't create time stamp, don't pluralize the table name
+    {
+        tableName: 'Workorder',
+        freezeTableName: true
+    }
     );
 
     // Joins the Workorder table with the Customer and Tech tables, forces the foreign key

@@ -16,8 +16,6 @@ $(document).ready(function () {
 
         modal.style.display = 'flex';
 
-        // };
-
         close.onclick = function () {
             modal.style.display = 'none';
         };
@@ -28,6 +26,7 @@ $(document).ready(function () {
             }
         };
     }
+
     // function for creating a new customer, calls getAllCustomers at the end
     function upsertNewCustomer(newCustomerData) {
         console.log(newCustomerData);
@@ -53,6 +52,7 @@ $(document).ready(function () {
             phone: customerPhone.val().trim()
         });
     }
+
     // adding event listener to the form
     $('#new-customer').on('submit', handleNewCustomerFormSubmit);
 });

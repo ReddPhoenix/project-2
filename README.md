@@ -8,15 +8,25 @@ A program to manage products, orders, employees, and customers.
 
 Link to live site: [Taskably](https://arcane-wildwood-67330.herokuapp.com/)
 
-![Dashboard](/public/assets/images/Dashboard.png)
+![Dashboard](/public/assets/images/taskably.gif)
 
 ## Table of Contents
 
+* [User_Story](#User_Story)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
 * [Questions](#questions)
+
+## User_Story
+As a manager of a warehouse that preforms installs and service calls, I want to be able to view customers, workorders, and technicians. I must be able to maintain personal data safe from unauthorized viewing.
+
+WHEN I login with credentials, 
+
+THEN I am shown a dashboard with workorders, inventory, and technicians
+
+AND I'm able to view detailed information as well as being able to create a new customer.
 
 ## Installation
 
