@@ -63,20 +63,14 @@
                         <strong><span id="spanDate"></span></strong>
                         <script type="text/javascript">
 
-                            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
-                                'August', 'September', 'October', 'November', 'December'];
+                            let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-                            var tomorrow = new Date();
+                            let tomorrow = new Date();
 
                             tomorrow.setTime(tomorrow.getTime());
 
                             document.getElementById("spanDate").innerHTML = months[tomorrow.getMonth()] + " " + tomorrow.getDate() + ", " + tomorrow.getFullYear();
                         </script>
-
-
-
-                        <!-- Placeholder name -->
-                        {{!-- <span class="has-text-grey-light">Hello </span> <strong>Alex Johnson</strong></h1> --}}
                 </div>
 
                 {{!-- Disabled for future deployment --}}
@@ -155,7 +149,6 @@
                                     </div>
                                 </div>
                             </div>
-
 
                             <div class="level">
                                 <div class="level-left">
@@ -258,7 +251,6 @@
                                 </div>
                             </div>
 
-
                             <a class="button is-link is-outlined" href="inventory">View all inventory</a>
                         </div>
                     </div>
@@ -287,8 +279,6 @@
                                 </div> --}}
                             </div>
                             {{/each}}
-
-
 
                             <a class="button is-link is-outlined" href="techs">View all technicians</a>
 

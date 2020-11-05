@@ -1,8 +1,6 @@
 // Dependencies
 const path = require('path');
-
 const controller = require('../controllers/controller.js');
-
 const isAuthenticated = require('../config/middleware/isAuthenticated');
 
 // Routes
@@ -29,6 +27,7 @@ module.exports = function (app) {
             });
         });
 
+    // Get workorders and count them
     app.get('/orders',
         isAuthenticated,
         async (req, res) => {
@@ -88,5 +87,4 @@ module.exports = function (app) {
     app.get('/', function (req, res) {
         res.sendFile(path.join(__dirname, '../public/login.html'));
     });
-
 };
