@@ -1,21 +1,18 @@
 $(document).ready(function () {
     // references to form info
-    var firstName = $(first_name);
-    var lastName = $(last_name);
-    var customerEmail = $(email);
-    var customerAddress = $(address);
-    var customerCity = $(city);
-    var customerState = $(state);
-    var customerZip = $(zip);
-    var customerPhone = $(phone);
-
-    // getting the initial customer
-    // getAllCustomers();
+    let firstName = $(first_name);
+    let lastName = $(last_name);
+    let customerEmail = $(email);
+    let customerAddress = $(address);
+    let customerCity = $(city);
+    let customerState = $(state);
+    let customerZip = $(zip);
+    let customerPhone = $(phone);
 
     // modal for submit
     function modalPopup() {
-        var modal = document.getElementById('page-modal');
-        var close = document.getElementsByClassName('modal-close')[0];
+        const modal = document.getElementById('page-modal');
+        const close = document.getElementsByClassName('modal-close')[0];
 
         modal.style.display = 'flex';
 
@@ -35,14 +32,11 @@ $(document).ready(function () {
     function upsertNewCustomer(newCustomerData) {
         console.log(newCustomerData);
         $.post('/api/new-customer', newCustomerData)
-            .then(function(data) {
+            .then(function (data) {
                 console.log(data);
                 modalPopup();
             });
-        // .then(getAllCustomers);
     }
-
-
 
     // function to handle new customer form being submitted to create the new customer
     function handleNewCustomerFormSubmit(event) {
