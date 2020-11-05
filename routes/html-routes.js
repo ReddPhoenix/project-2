@@ -1,7 +1,6 @@
 // Dependencies
 var path = require('path');
-const controller = require('../controllers/controller.js')
-// const { is } = require('sequelize/types/lib/operators');
+const controller = require('../controllers/controller.js');
 
 var isAuthenticated = require('../config/middleware/isAuthenticated');
 
@@ -31,7 +30,7 @@ module.exports = function (app) {
         });
 
     app.get('/orders',
-        isAuthenticated,
+        // isAuthenticated,
         async (req, res) => {
             console.log('===================== hit  ================')
             let orders = await controller.getAllWorkorders()
