@@ -33,7 +33,21 @@ module.exports = {
                         workorders.dataValues.Customer = workorders.dataValues.Customer.dataValues
                     }
                     // reformats date
-                    if (workorders.dataValues.appt_date) { workorders.dataValues.appt_date = new Date(workorders.dataValues.appt_date).toLocaleString() }
+                    if (workorders.dataValues.appt_date) {
+                        workorders.dataValues.appt_date = new Date(workorders.dataValues.appt_date).toLocaleString()
+                    }
+                    else {
+                        null
+                    }
+                    if (workorders.dataValues.status === 'Pending') {
+                        workorders.dataValues.scolor = 'is-warning'
+                    }
+                    else if (workorders.dataValues.status === 'Assigned') {
+                        workorders.dataValues.scolor = 'is-link'
+                    }
+                    else if (workorders.dataValues.status === 'Complete') {
+                        workorders.dataValues.scolor = 'is-success'
+                    }
                     else {
                         null
                     }
