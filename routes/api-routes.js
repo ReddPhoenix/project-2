@@ -1,6 +1,5 @@
-// const db = require('../models');
 const passport = require('../config/passport-config');
-const controller = require('../controllers/controller.js');
+// const controller = require('../controllers/controller.js');
 const db = require('../models');
 
 module.exports = function (app) {
@@ -9,30 +8,6 @@ module.exports = function (app) {
         res.json(req.user);
 
     });
-
-    app.get('/api/test/', async function (req, res) {
-        let workorders = await controller.getAllWorkorders()
-        res.json(workorders)
-
-    });
-
-    app.get('/api/test2/', async function (req, res) {
-        let techs = await controller.getAllTechs(3)
-        // res.send('test working')
-        res.json(techs)
-
-    });
-
-    app.get('/api/test3/', async function (req, res) {
-        let countWO = await controller.getCountWorkorders()
-        res.json(countWO)
-    })
-
-    app.get('/api/test4/', async function (req, res) {
-        let countWoT = await controller.getCountWoTC()
-        res.json(countWoT)
-    })
-
 
     // Route for logging user out
     app.get('/logout', function (req, res) {
@@ -47,7 +22,6 @@ module.exports = function (app) {
             res.json({});
         } else {
             // Otherwise send back the user's email and id
-            // Sending back a password, even a hashed password, isn't a good idea
             res.json({
                 email: req.user.email,
                 id: req.user.id
@@ -56,7 +30,6 @@ module.exports = function (app) {
     });
 
     app.post('/api/new-customer', function (req, res) {
-        console.log("inside", req.body)
         db.Customer.create(req.body).then(function (dbPost) {
             res.json(dbPost);
         });

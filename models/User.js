@@ -1,5 +1,5 @@
 const bcrypt = require('bcryptjs');
-// const passport = require('passport');
+
 // Creating our User model
 module.exports = function (sequelize, DataTypes) {
     const User = sequelize.define('User', {
@@ -25,6 +25,7 @@ module.exports = function (sequelize, DataTypes) {
         type: {
             type: DataTypes.STRING
         },
+        // makes the timestamps work properly
         createdAt: {
             type: 'TIMESTAMP',
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
@@ -36,6 +37,7 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         }
     });
+
     // Creating a custom method for our User model.
     User.prototype.validPassword = function (password) {
         // return bcrypt.compareSync(password, this.password);

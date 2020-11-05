@@ -1,3 +1,4 @@
+// Creates our Workorder Model
 module.exports = function (sequelize, DataTypes) {
     const Workorder = sequelize.define('Workorder', {
         id: {
@@ -21,6 +22,7 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: true
         },
+        // makes the timestamps work properly
         createdAt: {
             type: 'TIMESTAMP',
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
@@ -32,12 +34,14 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         }
     },
+        // Don't create time stamp, don't pluralize the table name
         {
             tableName: 'Workorder',
             freezeTableName: true
         }
     );
 
+    // Joins the Workorder table with the Customer and Tech tables, forces the foreign key
     Workorder.associate = function (models) {
         Workorder.belongsTo(models.Customer, {
             foreignKey: { allowNull: false, name: 'custId' }

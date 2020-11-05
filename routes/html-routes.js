@@ -1,8 +1,9 @@
 // Dependencies
-var path = require('path');
+const path = require('path');
+
 const controller = require('../controllers/controller.js');
 
-var isAuthenticated = require('../config/middleware/isAuthenticated');
+const isAuthenticated = require('../config/middleware/isAuthenticated');
 
 // Routes
 module.exports = function (app) {
@@ -22,7 +23,6 @@ module.exports = function (app) {
         isAuthenticated,
         async (req, res) => {
             let techs = await controller.getAllTechs()
-            // console.dir(techs)
             res.render('techs', {
                 techs: techs,
                 title: 'Technicians'
@@ -30,21 +30,17 @@ module.exports = function (app) {
         });
 
     app.get('/orders',
-        // isAuthenticated,
+        isAuthenticated,
         async (req, res) => {
-            console.log('===================== hit  ================')
             let orders = await controller.getAllWorkorders()
             let countWO = await controller.getCountWorkorders()
-            // console.dir(workorders)
-            // console.log(orders)
             res.render('orders', {
                 workorders: orders,
                 countWO: countWO
             });
         });
 
-    // dashboard route // main.handlebars route
-    // Route to index.handlebars
+    // Route to index.handlebars // dashboard route
     app.get('/index',
         isAuthenticated,
         async (req, res) => {
@@ -69,6 +65,7 @@ module.exports = function (app) {
                 countWoT: countWoT
             });
         });
+
     // inventory route
     app.get('/inventory',
         isAuthenticated,
@@ -76,9 +73,7 @@ module.exports = function (app) {
             res.render('inventory', {
                 title: 'Inventory'
             });
-            // res.send('inventory page');
         });
-    // res.send('inventory page');
 
     // new customer route
     app.get('/new-customer',
@@ -87,8 +82,8 @@ module.exports = function (app) {
             res.render('new-customer', {
                 title: 'New Customer'
             });
-            // res.send('inventory page');
         });
+
     // login route
     app.get('/', function (req, res) {
         res.sendFile(path.join(__dirname, '../public/login.html'));

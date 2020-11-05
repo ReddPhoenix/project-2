@@ -1,6 +1,7 @@
 const db = require('../models');
 
 module.exports = {
+    // Get All Customers
     getAllCustomers: async function () {
         try {
             return (await db.Customer.findAll({}))
@@ -16,6 +17,7 @@ module.exports = {
         }
         catch (err) { console.error(err) }
     },
+    // Get All Workorders
     getAllWorkorders: async () => {
         try {
             let orders = (await db.Workorder.findAll({
@@ -39,6 +41,7 @@ module.exports = {
                     else {
                         null
                     }
+                    // adds property to change the color of the tag
                     if (workorders.dataValues.status === 'Pending') {
                         workorders.dataValues.scolor = 'is-warning'
                     }
@@ -57,6 +60,8 @@ module.exports = {
         }
         catch (err) { console.error(err) }
     },
+
+    // Get Number of Workorders
     getCountWorkorders: async () => {
         try {
             let countWO = (await db.Workorder.count())
@@ -64,6 +69,8 @@ module.exports = {
         }
         catch (err) { console.error(err) }
     },
+
+    // Get Number of Pending Workorders
     getCountWoPend: async () => {
         try {
             let countWoP = (await db.Workorder.count({
@@ -75,6 +82,8 @@ module.exports = {
         }
         catch (err) { console.error(err) }
     },
+
+    // Get Number of Assigned Workorders
     getCountWoAsd: async () => {
         try {
             let countWoA = (await db.Workorder.count({
@@ -86,6 +95,8 @@ module.exports = {
         }
         catch (err) { console.error(err) }
     },
+
+    // Get Number of Complete Workorders
     getCountWoCom: async () => {
         try {
             let countWoC = (await db.Workorder.count({
@@ -97,6 +108,8 @@ module.exports = {
         }
         catch (err) { console.error(err) }
     },
+
+    // Get Number of New Install Workorders
     getCountWoNI: async () => {
         try {
             let countWoN = (await db.Workorder.count({
@@ -108,6 +121,8 @@ module.exports = {
         }
         catch (err) { console.error(err) }
     },
+
+    // Get Number of Service Call Workorders
     getCountWoSC: async () => {
         try {
             let countWoS = (await db.Workorder.count({
@@ -119,11 +134,13 @@ module.exports = {
         }
         catch (err) { console.error(err) }
     },
+
+    // Get Number of Trouble Call Workorders
     getCountWoTC: async () => {
         try {
             let countWoT = (await db.Workorder.count({
                 where: {
-                    reason: 'Service Call'
+                    reason: 'Trouble Call'
                 }
             }))
             return countWoT
@@ -131,10 +148,4 @@ module.exports = {
         catch (err) { console.error(err) }
     }
 
-    // Create New Customer Query
-    // insertCustomer: async()=>{
-    //     let new =(await db.Customer.create(req.body))
-    // },
 };
-
-console.log('controller is working: ', db.Workorder);

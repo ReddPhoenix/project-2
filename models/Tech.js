@@ -1,3 +1,4 @@
+// Creating our Tech Model
 module.exports = function (sequelize, DataTypes) {
     const Tech = sequelize.define('Tech', {
         id: {
@@ -27,12 +28,14 @@ module.exports = function (sequelize, DataTypes) {
         },
     },
 
+        // Don't create time stamp, don't pluralize the table name
         {
             timestamps: false,
             tableName: 'Tech',
             freezeTableName: true
         });
 
+    // Joins the Tech table with the Workorder table
     Tech.associate = function (models) {
         Tech.hasMany(models.Workorder, { foreignKey: 'techId' });
     };

@@ -1,3 +1,4 @@
+// creating our Customer Model
 module.exports = function (sequelize, DataTypes) {
     const Customer = sequelize.define('Customer', {
         id: {
@@ -40,12 +41,15 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         },
     },
+
+        // Don't create time stamp, don't pluralize the table name
         {
             timestamps: false,
             tableName: 'Customer',
             freezeTableName: true
         });
 
+    // Joins the Customer table with the Workorder table
     Customer.associate = function (models) {
         Customer.hasMany(models.Workorder, { foreignKey: 'custId' });
     };

@@ -4,11 +4,10 @@ $(document).ready(function () {
     const loginForm = $('form.login');
     const emailInput = $('input#email-input');
     const passwordInput = $('input#password-input');
-    console.log(loginForm);
+
     // When the form is submitted, we validate there's an email and password entered
     loginForm.on('submit', function (event) {
         event.preventDefault();
-        console.log('this is working!');
         const userData = {
             email: emailInput.val().trim(),
             password: passwordInput.val().trim()
@@ -31,12 +30,12 @@ $(document).ready(function () {
             password: password
         })
             .then(function () {
-                console.log('nothing is happening');
                 window.location.replace('/index');
-                // If there's an error, log the error
+
             })
+            // If there's an error, log the error
             .catch(function (err) {
-                console.log(err);
+                console.error(err);
             });
     }
 });
