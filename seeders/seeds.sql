@@ -1,5 +1,3 @@
--- use taskably2;
-
 insert into Customer (id, first_name, last_name, email,address,city,state,zip,phone)
 values(1,'Prinz','Gomme','pgomme0@tamu.edu','617 Moulton Center','Billings','MT',59112,'406-392-0745')
 ,(2,'Baxy','Farrall','bfarrall1@booking.com','4 Warrior Terrace','Monticello','MN',55585,'763-468-2436')

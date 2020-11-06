@@ -1,9 +1,24 @@
-/* eslint-disable no-use-before-define */
 $(document).ready(function () {
     // Getting references to our form and inputs
     const loginForm = $('form.login');
     const emailInput = $('input#email-input');
     const passwordInput = $('input#password-input');
+
+    // loginUser does a post to our 'api/login' route and if successful, redirects us the the members page
+    function loginUser(email, password) {
+        $.post('/api/login', {
+            email: email,
+            password: password
+        })
+            .then(function () {
+                window.location.replace('/index');
+
+            })
+            // If there's an error, log the error
+            .catch(function (err) {
+                console.error(err);
+            });
+    }
 
     // When the form is submitted, we validate there's an email and password entered
     loginForm.on('submit', function (event) {
@@ -23,19 +38,4 @@ $(document).ready(function () {
         passwordInput.val('');
     });
 
-    // loginUser does a post to our 'api/login' route and if successful, redirects us the the members page
-    function loginUser(email, password) {
-        $.post('/api/login', {
-            email: email,
-            password: password
-        })
-            .then(function () {
-                window.location.replace('/index');
-
-            })
-            // If there's an error, log the error
-            .catch(function (err) {
-                console.error(err);
-            });
-    }
 });

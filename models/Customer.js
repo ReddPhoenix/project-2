@@ -42,12 +42,12 @@ module.exports = function (sequelize, DataTypes) {
         },
     },
 
-        // Don't create time stamp, don't pluralize the table name
-        {
-            timestamps: false,
-            tableName: 'Customer',
-            freezeTableName: true
-        });
+    // Don't create time stamp, don't pluralize the table name
+    {
+        timestamps: false,
+        tableName: 'Customer',
+        freezeTableName: true
+    });
 
     // Joins the Customer table with the Workorder table
     Customer.associate = function (models) {

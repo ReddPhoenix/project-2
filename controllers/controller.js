@@ -2,7 +2,7 @@ const db = require('../models');
 
 module.exports = {
     // Get All Customers
-    getAllCustomers: async function () {
+    getAllCustomers: async () => {
         try {
             return (await db.Customer.findAll({}))
                 .map(customer => customer.dataValues)
@@ -147,5 +147,4 @@ module.exports = {
         }
         catch (err) { console.error(err) }
     }
-
 };
