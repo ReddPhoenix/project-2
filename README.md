@@ -6,6 +6,12 @@
 
 A program to manage products, orders, employees, and customers.
 
+Credentials to log in: 
+
+Email:    task@b.ly
+Password: t
+
+
 Link to live site: [Taskably](https://arcane-wildwood-67330.herokuapp.com/)
 
 ![Dashboard](/public/assets/images/taskably.gif)
