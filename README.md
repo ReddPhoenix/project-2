@@ -16,6 +16,10 @@ Link to live site: [Taskably](https://arcane-wildwood-67330.herokuapp.com/)
 
 ![Dashboard](/public/assets/images/taskably.gif)
 
+Awarded Certificate of Recognition for Best UI/UX: 
+![CertificateOfRecognition](/public/assets/Best_UIUX_taskably.png)
+
+
 ## Table of Contents
 
 * [User_Story](#User_Story)
