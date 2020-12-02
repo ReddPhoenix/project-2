@@ -78,46 +78,47 @@
               </div> --}}
       </nav>
 
-      <table class="table is-hoverable is-fullwidth">
-        <thead>
-          <tr>
-            <th>Order #</th>
-            <th>Technician</th>
-            <th>Customer Name</th>
-            <th>Appoinment Date</th>
-            <th>Products</th>
-            <th>Reason</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tfoot>
-          <tr>
-            <th>Order #</th>
-            <th>Technician</th>
-            <th>Customer Name</th>
-            <th>Appointment Date</th>
-            <th>Products</th>
-            <th>Reason</th>
-            <th class="">Status</th>
-          </tr>
-        </tfoot>
-        <tbody>
-          {{#each workorders}}
-          <tr>
-            <td><strong> {{id}}</strong></td>
-            <td>{{Tech.first_name}} {{Tech.last_name}}</td>
-            <td>{{Customer.first_name}} {{Customer.last_name}}</td>
-            <td>{{appt_date}}</td>
-            <td>{{products}}</td>
-            <td><span class="">{{reason}}</span></td>
-            <td><span class="tag {{scolor}}">{{status}}</span></td>
-          </tr>
-          {{/each}}
-        </tbody>
-      </table>
+      <div class="table-container">
+        <table class="table is-hoverable is-fullwidth">
+          <thead>
+            <tr>
+              <th>Order #</th>
+              <th>Technician</th>
+              <th>Customer Name</th>
+              <th>Appoinment Date</th>
+              <th>Products</th>
+              <th>Reason</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Order #</th>
+              <th>Technician</th>
+              <th>Customer Name</th>
+              <th>Appointment Date</th>
+              <th>Products</th>
+              <th>Reason</th>
+              <th class="">Status</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            {{#each workorders}}
+            <tr>
+              <td><strong> {{id}}</strong></td>
+              <td>{{Tech.first_name}} {{Tech.last_name}}</td>
+              <td>{{Customer.first_name}} {{Customer.last_name}}</td>
+              <td>{{appt_date}}</td>
+              <td>{{products}}</td>
+              <td><span class="">{{reason}}</span></td>
+              <td><span class="tag {{scolor}}">{{status}}</span></td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
 
-      {{!-- Disabled for future deployment --}}
-      {{!-- <nav class="pagination">
+        {{!-- Disabled for future deployment --}}
+        {{!-- <nav class="pagination">
                     <a class="pagination-previous">Previous</a>
                     <a class="pagination-next">Next</a>
                     <ul class="pagination-list">
@@ -130,7 +131,7 @@
                         <li><a class="pagination-link">86</a></li>
                     </ul>
                 </nav> --}}
-
+      </div>
     </div>
   </div>
 </section>

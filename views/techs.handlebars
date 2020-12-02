@@ -84,65 +84,66 @@
                 </div> --}}
             </nav>
 
-            <table class="table is-hoverable is-fullwidth">
-                <thead>
-                    <tr>
-                        {{!-- Disabled for future deployment --}}
-                        {{!-- <th class="is-narrow">
+            <div class="table-container">
+                <table class="table is-hoverable is-fullwidth">
+                    <thead>
+                        <tr>
+                            {{!-- Disabled for future deployment --}}
+                            {{!-- <th class="is-narrow">
                             <input type="checkbox">
                         </th> --}}
-                        <th>Name</th>
-                        <th>Email</th>
-                        {{!-- <th>Address</th> --}}
-                        {{!-- <th>Orders</th> --}}
-                        <th>Phone Number</th>
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        {{!-- Disabled for future deployment --}}
-                        {{!-- <th class="is-narrow">
+                            <th>Name</th>
+                            <th>Email</th>
+                            {{!-- <th>Address</th> --}}
+                            {{!-- <th>Orders</th> --}}
+                            <th>Phone Number</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            {{!-- Disabled for future deployment --}}
+                            {{!-- <th class="is-narrow">
                             <input type="checkbox">
                         </th> --}}
-                        <th>Name</th>
-                        <th>Email</th>
-                        {{!-- <th>Address</th> --}}
-                        {{!-- <th>Orders</th> --}}
-                        <th>Phone Number</th>
-                    </tr>
-                </tfoot>
-                <tbody>
-                    {{#each techs}}
-                    <tr>
-                        {{!-- Disabled for future deployment --}}
-                        {{!-- <td>
+                            <th>Name</th>
+                            <th>Email</th>
+                            {{!-- <th>Address</th> --}}
+                            {{!-- <th>Orders</th> --}}
+                            <th>Phone Number</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        {{#each techs}}
+                        <tr>
+                            {{!-- Disabled for future deployment --}}
+                            {{!-- <td>
                             <input type="checkbox">
                         </td> --}}
-                        <td>
-                            <strong>
-                                <p>{{first_name}} {{last_name}}</p>
-                            </strong></a>
-                        </td>
-                        <td><code>{{email}}</code></td>
+                            <td>
+                                <strong>
+                                    <p>{{first_name}} {{last_name}}</p>
+                                </strong></a>
+                            </td>
+                            <td><code>{{email}}</code></td>
 
-                        {{!-- <td>
+                            {{!-- <td>
                             <a href="customer-orders.html">10</a>
                         </td> --}}
-                        <td>
-                            <div class="buttons">
-                                {{phone}}
-                                {{!-- <a href="edit-customer.html" class="button is-small">Edit</a>
+                            <td>
+                                <div class="buttons">
+                                    {{phone}}
+                                    {{!-- <a href="edit-customer.html" class="button is-small">Edit</a>
                                 <a class="button is-small">Delete</a> --}}
-                            </div>
-                        </td>
-                    </tr>
-                    {{/each}}
+                                </div>
+                            </td>
+                        </tr>
+                        {{/each}}
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
 
-            {{!-- Disabled for future deployment --}}
-            {{!-- <nav class="pagination">
+                {{!-- Disabled for future deployment --}}
+                {{!-- <nav class="pagination">
                     <a class="pagination-previous">Previous</a>
                     <a class="pagination-next">Next</a>
                     <ul class="pagination-list">
@@ -155,6 +156,7 @@
                         <li><a class="pagination-link">86</a></li>
                     </ul>
                 </nav> --}}
+            </div>
         </div>
     </div>
 </section>

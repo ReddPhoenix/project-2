@@ -60,7 +60,7 @@
                             <span class='icon is-small'>
                                 <i class="fas fa-user-edit"> </i>
                             </span>
-                             <span>Create New Customer</span>
+                            <span>Create New Customer</span>
                         </a>
                     </p>
 
@@ -85,67 +85,68 @@
                 </div> --}}
             </nav>
 
-            <table class="table is-hoverable is-fullwidth">
-                <thead>
-                    <tr>
-                        {{!-- Disabled for future deployment --}}
-                        {{!-- <th class="is-narrow">
+            <div class="table-container">
+                <table class="table is-hoverable is-fullwidth">
+                    <thead>
+                        <tr>
+                            {{!-- Disabled for future deployment --}}
+                            {{!-- <th class="is-narrow">
                             <input type="checkbox">
                         </th> --}}
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Address</th>
-                        <th>City</th>
-                        <th>State</th>
-                        <th>Phone Number</th>
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        {{!-- Disabled for future deployment --}}
-                        {{!-- <th class="is-narrow">
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Phone Number</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            {{!-- Disabled for future deployment --}}
+                            {{!-- <th class="is-narrow">
                                 <input type="checkbox">
                             </th> --}}
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Address</th>
-                        <th>City</th>
-                        <th>State</th>
-                        <th>Phone Number</th>
-                    </tr>
-                </tfoot>
-                <tbody>
-                    {{#each customers}}
-                    <tr>
-                        {{!-- Disabled for future deployment --}}
-                        {{!-- <td>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Phone Number</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        {{#each customers}}
+                        <tr>
+                            {{!-- Disabled for future deployment --}}
+                            {{!-- <td>
                                 <input type="checkbox">
                             </td> --}}
-                        <td>
-                            <strong>
-                                <p>{{first_name}} {{last_name}}</p>
-                            </strong></a>
-                        </td>
-                        <td><code>{{email}}</code></td>
-                        <td>{{address}}</td>
-                        <td>{{city}}</td>
-                        <td>{{state}}</td>
-                        <td>
-                            <div class="buttons">
-                                {{phone}}
-                                {{!-- Disabled for future deployment --}}
-                                {{!-- <a href="edit-customer.html" class="button is-small">Edit</a>
+                            <td>
+                                <strong>
+                                    <p>{{first_name}} {{last_name}}</p>
+                                </strong></a>
+                            </td>
+                            <td><code>{{email}}</code></td>
+                            <td>{{address}}</td>
+                            <td>{{city}}</td>
+                            <td>{{state}}</td>
+                            <td>
+                                <div class="buttons">
+                                    {{phone}}
+                                    {{!-- Disabled for future deployment --}}
+                                    {{!-- <a href="edit-customer.html" class="button is-small">Edit</a>
                                 <a class="button is-small">Delete</a> --}}
-                            </div>
-                        </td>
-                    </tr>
-                    {{/each}}
+                                </div>
+                            </td>
+                        </tr>
+                        {{/each}}
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
 
-            {{!-- Disabled for future deployment --}}
-            {{!-- <nav class="pagination">
+                {{!-- Disabled for future deployment --}}
+                {{!-- <nav class="pagination">
                     <a class="pagination-previous">Previous</a>
                     <a class="pagination-next">Next</a>
                     <ul class="pagination-list">
@@ -158,6 +159,7 @@
                         <li><a class="pagination-link">86</a></li>
                     </ul>
                 </nav> --}}
+            </div>
         </div>
     </div>
 </section>
