@@ -2,3 +2,8 @@ h3 {
     font-family: Permanent Marker;
     font-size: larger;
 }
+
+.table-container {
+    overflow-x: scroll;
+    max-width: 100%;
+}
